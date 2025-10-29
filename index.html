@@ -519,39 +519,170 @@
         <!-- main_gramAbility [E] -->
         <!-- hospitalInfo [S] -->
         <div class="hospitalInfo">
-          <div class="mapBox"></div>
+          <div class="pageContainer04">
+            <div class="kakaoMapBox">
+              <div
+                id="daumRoughmapContainer1761663390002"
+                class="root_daum_roughmap root_daum_roughmap_landing"
+              ></div>
+            </div>
+            <div class="callcenter">
+              <img src="./assets/images/main/ico_phone.png" alt="" />
+              <p class="calltitle">대표 상담 전화</p>
+              <a href="tel:02-516-0912">02-516-0912</a>
+              <img src="./assets/images/main/ico_clock.png" alt="" />
+              <p class="calltitle">진료 시간</p>
+              <div class="workdate">
+                <div class="timerow">
+                  <div class="yoil">
+                    <span>월</span>
+                    <span>화</span>
+                    <span>금</span>
+                  </div>
+                  <p class="time">AM10:30~PM8:00</p>
+                </div>
+                <div class="timerow">
+                  <div class="yoil">
+                    <span>수</span>
+                  </div>
+                  <p class="time">PM02:00~PM9:00</p>
+                </div>
+                <div class="timerow">
+                  <div class="yoil">
+                    <span>목</span>
+                  </div>
+                  <p class="time">AM10:30~PM9:00</p>
+                </div>
+                <div class="timerow">
+                  <div class="yoil">
+                    <span>토</span>
+                  </div>
+                  <p class="time">AM10:00~PM4:00</p>
+                </div>
+                <p class="workdate_notify">
+                  <span
+                    >※ 점심시간 PM 01 : 00 ~ 02 : 00 (수, 토요일은 제외)</span
+                  >
+                  <span>※ 일요일, 공휴일 휴진입니다.</span>
+                </p>
+              </div>
+            </div>
+            <div class="ctaForm">
+              <form action="#" method="post">
+                <h2 class="ctatitle">쉽고 빠른 상담신청</h2>
+
+                <div class="formBox">
+                  <div>
+                    <label for="customer_name">이름</label>
+                    <input type="text" id="customer_name" />
+                  </div>
+                  <div>
+                    <label for="customer_phone">연락처</label>
+                    <input
+                      type="text"
+                      id="customer_phone"
+                      class="datetimeOnly"
+                    />
+                  </div>
+                  <div>
+                    <label>진료여부</label>
+                    <div class="radioGroup">
+                      <input
+                        type="radio"
+                        name="isFirstVisit"
+                        value="yes"
+                        id="isFirstVisit01"
+                      />
+                      <label for="isFirstVisit01">초진</label>
+                      <input
+                        type="radio"
+                        name="isFirstVisit"
+                        value="no"
+                        id="isFirstVisit02"
+                      />
+                      <label for="isFirstVisit02">재진</label>
+                    </div>
+                  </div>
+                  <div>
+                    <label>관심부위</label>
+                    <select>
+                      <option value="">관심부위</option>
+                    </select>
+                  </div>
+
+                  <button class="submitBtn">상담하기</button>
+                  <div class="main_terms">
+                    <div>
+                      <input type="checkbox" id="termsAgree" />
+                      <label for="termsAgree">개인정보취급방침 동의</label>
+                    </div>
+                    <a href="#" class="viewTerms">내용보기</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
         <!-- hospitalInfo [E] -->
       </main>
+      <footer>
+        <h2 class="footer_logo">
+          <img
+            src="./assets/images/main/main_logo_white_md.png"
+            alt="그램한의원"
+          />
+        </h2>
+        <ul class="footer_link01">
+          <li><a href="#">개인정보취급방침</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">미성년자동의서 다운로드</a></li>
+        </ul>
+        <ul class="footer_infolist">
+          <li>06114) 서울 강남구 강남대로 526 2층</li>
+          <li><i>.</i>대표원장 : 이영채</li>
+          <li><i>.</i>사업자등록번호 : 861-14-02642</li>
+          <li><i>.</i>대표전화 : 02-516-0912</li>
+        </ul>
+        <ul class="sns_list">
+          <li>
+            <a href="#"
+              ><img src="./assets/images/main/ico_sns_kakao.png" alt="카카오"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="./assets/images/main/ico_sns_insta.png"
+                alt="인스타그램"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="./assets/images/main/ico_sns_naverblog.png"
+                alt="네이버블로그"
+            /></a>
+          </li>
+        </ul>
+        <p class="copyright">
+          COPYRIGHT 2025 GRAM CLINIC. ALL RIGHTS RESERVED. MADE BY DPWORKS
+        </p>
+        <a href="#" class="fee_link">비급여수가표</a>
+      </footer>
     </div>
-    <script>
-      // 네이버 지도 초기화
-      var mapOptions = {
-        center: new naver.maps.LatLng(37.5665, 126.978), // 서울시청 좌표
-        zoom: 15,
-      };
+    <script
+      charset="UTF-8"
+      class="daum_roughmap_loader_script"
+      src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
+    ></script>
 
-      var map = new naver.maps.Map("map", mapOptions);
-
-      // 마커 추가
-      var marker = new naver.maps.Marker({
-        position: new naver.maps.LatLng(37.5665, 126.978),
-        map: map,
-        title: "그램 한의원",
-      });
-
-      // 정보창 추가
-      var infoWindow = new naver.maps.InfoWindow({
-        content: '<div style="padding:10px;font-size:14px;">그램 한의원</div>',
-      });
-
-      naver.maps.Event.addListener(marker, "click", function () {
-        if (infoWindow.getMap()) {
-          infoWindow.close();
-        } else {
-          infoWindow.open(map, marker);
-        }
-      });
+    <!-- 3. 실행 스크립트 -->
+    <script charset="UTF-8">
+      new daum.roughmap.Lander({
+        timestamp: "1761663390002",
+        key: "2d2qazyvrneh",
+        mapHeight: "532",
+      }).render();
     </script>
   </body>
 </html>

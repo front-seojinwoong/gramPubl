@@ -30,6 +30,32 @@ $(document).ready(function () {
     $(".fadeinoutImgBox" + idx).addClass("active");
   });
 
+  $(document).on("keyup", "input.moneyOnly", function () {
+    $(this).val(
+      comma(
+        uncomma(
+          $(this)
+            .val()
+            .replace(/[^0-9:\,]/gi, "")
+        )
+      )
+    );
+  }); // �� �쇳몴李띻린 泥섎━, �レ옄留� �낅젰
+  $(document).on("keyup", "input.numberOnly", function () {
+    $(this).val(
+      $(this)
+        .val()
+        .replace(/[^0-9]/gi, "")
+    );
+  }); // �レ옄留� �낅젰
+  $(document).on("keyup", "input.datetimeOnly", function () {
+    $(this).val(
+      $(this)
+        .val()
+        .replace(/[^0-9:\-]/gi, "")
+    );
+  }); // �꾪솕踰덊샇 �レ옄留� �낅젰
+
   // Main Banner Swiper
   new Swiper(".main_banner_slider", {
     effect: "fade",
