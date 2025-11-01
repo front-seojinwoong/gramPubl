@@ -24,10 +24,11 @@ $(document).ready(function () {
 
   $(".main_gramAbility .tabBox li").on("click", function () {
     var idx = $(this).index();
-    console.log(idx);
     $(this).addClass("active").siblings("li").removeClass("active");
     $(".fadeinoutImg > div").removeClass("active");
     $(".fadeinoutImgBox" + idx).addClass("active");
+    $('.main_gramAbility .mentBox > div').removeClass('active');
+    $('.main_gramAbility .mentBox > div').eq(idx).addClass('active');
   });
 
   $(document).on("keyup", "input.moneyOnly", function () {
@@ -90,12 +91,20 @@ $(document).ready(function () {
 
   // Event Swiper
   new Swiper(".eventSwiper", {
-    slidesPerView: 3,
-    spaceBetween: 77,
     loop: true,
     navigation: {
       nextEl: ".eventSwiper .swiper-button-next",
       prevEl: ".eventSwiper .swiper-button-prev",
+    },
+    breakpoints: {
+      0: {
+        spaceBetween: 40,
+        slidesPerView: 1,
+      },
+      1025: {
+        spaceBetween: 77,
+        slidesPerView: 3,
+      },
     },
   });
 });
