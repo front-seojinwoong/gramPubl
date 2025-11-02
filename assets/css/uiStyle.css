@@ -1,4 +1,4 @@
-@charset "utf-8"; 
+@charset "utf-8";
 /*
  css style index
 
@@ -6,6 +6,7 @@
  1. 헤더
  2. 푸터
  3. 메인페이지
+ 4. 서브페이지
 */
 /* 0. 공통 */
 body:has(.moGnbMenu.active), html:has(.moGnbMenu.active) { overflow-y: hidden; }
@@ -15,11 +16,12 @@ body:has(.moGnbMenu.active), html:has(.moGnbMenu.active) { overflow-y: hidden; }
 .pageContainer02.rightSpace { max-width: 1460px; width: 100%; margin-left: auto; margin-right: 0; padding: 0 0 0 20px; }
 .pageContainer03 { max-width: 1770px; width: 100%; margin-left: 0; margin-right: auto; padding: 0 20px 0 0; }
 .pageContainer04 { max-width: 1672px; width: 100%; margin: 0 auto; display: flex; }
+.subContainer { max-width: 1460px; width: 100%; margin: 0 auto; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
 .mo_ver { display: none !important; }
 /* 1. 헤더 */
-header { position: fixed; top: 0; left: 0; width: 100%; z-index: 100; background: #fff; }
-header .pageContainer { display: flex; justify-content: space-between; }
+header { position: fixed; top: 0; left: 0; width: 100%; z-index: 100; background: #fff; height: 100px; }
+header .pageContainer { display: flex; justify-content: space-between; height: 100%; }
 .headerBg { position: absolute; width: 100%; height: 100px; left: 0; top: 0; z-index: -1; }
 header h1 { padding: 36px 0 12px 78px; }
 header .gnbWrap { display: flex; }
@@ -60,6 +62,7 @@ header .gnbWrap { display: flex; }
 .moGnb__submenu li:last-child { border-bottom: none; }
 .moGnb__submenu li a { display: flex; justify-content: space-between; align-items: center; padding: 24px 20px; font-size: 15px; color: #505050; height: 65px; margin-left: 20px; border-bottom: 1px solid rgb(92, 92, 92, 0.4); }
 .moGnb__submenu li a::after { content: ""; display: inline-block; width: 8px; height: 8px; border-right: 1.5px solid #595959; border-bottom: 1.5px solid #595959; transform: rotate(-45deg); }
+header + main { margin-top: 100px; }
 /* 3. 메인페이지 */
 .mainPage { overflow-x: hidden; }
 .main_banner_slider { width: 100%; height: 960px; position: relative; }
@@ -186,6 +189,466 @@ header .gnbWrap { display: flex; }
 .ctaForm .formBox .main_terms div label:before { content: ""; width: 16px; height: 16px; background-color: #fff; left: 0; top: 50%; transform: translateY(-50%); position: absolute; }
 .ctaForm .formBox .main_terms div input[type="checkbox"]:checked + label:after { content: ""; position: absolute; background-image: url(../images/common/ico_check.png); left: 1px; top: 50%; transform: translateY(-50%); z-index: 1; width: 14px; height: 14px; background-size: cover; }
 .ctaForm .formBox .main_terms .viewTerms { background: #1c1917; width: 76px; height: 26px; display: flex; align-items: center; justify-content: center; border-radius: 6px; }
+/* 4. 서브페이지 */
+/* 4-0. 서브페이지 공통 */
+.sub_banner { position: relative; aspect-ratio: 1920 / 743; }
+.sub_banner .subContainer { color: #151515; position: relative; text-align: center; height: 100%; display: flex; align-items: center; justify-content: center; }
+.sub_banner .inner { position: absolute; left: 0; top: 0; }
+.sub_banner .inner img { width: 100%; height: 100%; }
+.sub_banner .sub_banner_txt .txt1 { font-size: 24px; font-weight: 300; margin-bottom: 16px; }
+.sub_banner .sub_banner_txt .txt1 strong { font-weight: 500; }
+.sub_banner .sub_banner_txt .txt2 { font-size: 60px; font-weight: 300; margin-bottom: 40px; }
+.sub_banner .sub_banner_txt .txt2 strong { font-weight: 700; }
+.sub_banner .sub_banner_txt .txt3 { display: flex; flex-direction: column; line-height: 1.6; font-size: 18px; }
+.sub_banner .sub_banner_txt .txt3 strong { font-weight: 600; }
+.sub_content_title { text-align: center; }
+.sub_content_title .title1 { font-size: 20px; font-weight: 300; display: flex; justify-content: center; gap: 24px; margin-bottom: 35px; }
+.sub_content_title .title1 em { color: #f6f7f8; background: #cb8ebd; padding: 0 15px; }
+.sub_content_title .title2 { font-size: 48px; margin-bottom: 27px; }
+.sub_content_title .title2 strong { font-weight: 700; }
+.sub_content_title .title3 { font-size: 22px; }
+/* 4-1. 졸업패키지 */
+.sub_graduation01 {
+    position: relative;
+    height: auto;
+    width: 100%;
+    aspect-ratio: 480 / 241;
+}
+.sub_graduation01 .bgInner{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.sub_graduation01 .bgInner > img{
+    width: 100%;
+    display: block;
+}
+.sub_graduation01 .packageBox {
+    position: relative;
+    z-index: 1;
+    /* border: 1px solid red; */
+    text-align: center;
+    max-width: fit-content;
+    padding-top: 160px;
+}
+.sub_graduation01 .packageBox .ment{
+    display: flex;
+    flex-direction: column;
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 60px;
+}
+.sub_graduation01 .packageBox .ment span{}
+.sub_graduation01 .packageBox .ment span strong{
+    font-family: "Noto Serif Korean";
+    font-weight: 700;
+}
+.sub_graduation01 .packageBox .ment2 {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.sub_graduation01 .packageBox .ment2 strong{
+    font-weight: 700;
+}
+.sub_graduation01 .packageBox .ment3 {
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 120px;
+}
+.sub_graduation01 .packageBox .ment3 strong{
+    font-weight: 600;
+}
+.sub_graduation01 .packagePicto {}
+.sub_graduation01 .packagePicto p{
+    position: relative;
+    font-size: 40px;
+    /* display: inline-block; */
+    /* background: red; */
+    margin-bottom: 70px;
+}
+.sub_graduation01 .packagePicto p span{
+  background-color: #e1e6ec;
+  padding: 0 26px;
+}
+.sub_graduation01 .packagePicto p em{
+    font-weight: 700;
+}
+.sub_graduation01 .packagePicto p:before {
+  content: "";
+  position: absolute;
+  width: calc(100% - 112px);
+  height: 1px;
+  background: #554c4a;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.sub_graduation01 .packagePicto ul {
+    display: flex;
+}
+.sub_graduation01 .packagePicto ul li{
+    width: 198px;
+    height: 198px;
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255, 0.5);
+    box-shadow: 0px 14px 21px 3px rgba(0, 0, 0, 0.30);
+    font-weight: 700;
+    margin: 0 -13px;
+}
+
+.sub_graduation02,
+.sub_graduation03, 
+.sub_graduation04 {
+    text-align: center;
+    margin-top: 150px;
+    padding-bottom: 150px;
+    position: relative;
+}
+.sub_graduation03, 
+.sub_graduation04  {margin-top: 20px;}
+.sub_graduation02:after,
+.sub_graduation03:after,
+.sub_graduation04:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  max-width: 1085px;
+  height: 1px;
+  background: #cededc;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.sub_graduation02 .subContainer,
+.sub_graduation03 .subContainer{
+    padding: 0 110px;
+}
+.graduation_title_content {}
+.graduation_title_content .txt1{
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+.graduation_title_content h2{
+    font-size: 70px;
+    font-weight: 300;
+    margin-bottom: 32px;
+}
+.graduation_title_content h2 strong{
+    font-weight: 700;
+}
+.graduation_title_content .txt2{
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.graduation_numbering {
+    margin-top: 100px;
+    /* margin-bottom: 65px; */
+    /* padding-top: 115px; */
+    /* padding-bottom: 138px; */
+}
+.graduation_numbering .imgBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 65px;
+}
+.graduation_numbering .imgBox .capImg{
+    width: 88px;
+}
+.graduation_numbering .imgBox .numberingImg{
+    width: 122px;
+    margin-top: -34px;
+    z-index: -1;
+}
+.graduation_numbering .numberingMent {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+    align-items: center;
+}
+.sub_graduation04,
+.sub_graduation05 {overflow: hidden;}
+.sub_graduation04 .graduation_numbering .numberingMent,
+.sub_graduation05 .graduation_numbering .numberingMent {margin-bottom: 0;}
+.sub_graduation04 .graduation_numbering .numberingMent .ment2,
+.sub_graduation05 .graduation_numbering .numberingMent .ment2 {margin-bottom: 40px;}
+
+.graduation_numbering .numberingMent .ment1{
+    font-size: 36px;
+    margin-bottom: 26px;
+    font-weight: 300;
+}
+.graduation_numbering .numberingMent .ment2{
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+.graduation_numbering .numberingMent .ment4{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.7;
+}
+.graduation_numbering .numberingMent .ment4 strong{
+  font-weight: 700;
+}
+.graduation_numbering .numberingMent .mentImg{
+    width: 412px;
+    margin-bottom: 60px;
+}
+.graduation_numbering .numberingMent > span{
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+}
+.graduation_numbering .numberingMent > span strong{
+    font-weight: 700;
+}
+
+.graduation_step_lists {
+    display: flex;
+    gap: 38px;
+}
+.graduation_step_lists > li{
+    flex: 1;
+}
+.graduation_step_lists > li div.picture{}
+.graduation_step_lists > li div.picture.center{}
+.graduation_step_lists > li div.picture img{
+    width: 100%;
+}
+.graduation_step_lists > li .stepTxt{
+    margin-top: 30px;
+    text-align: center;
+}
+.graduation_step_lists > li .stepTxt .txtTag{
+    background: #aa679b;
+    font-size: 20px;
+    border-radius: 15px;
+    display: inline-block;
+    font-family: "Pretendard", sans-serif;
+    color: #fff;
+    font-weight: 300;
+    height: 30px;
+    display: inline-flex;
+    margin-bottom: 10px;
+    align-items: center;
+    width: 143px;
+    gap: 5px;
+    justify-content: center;
+}
+.graduation_step_lists > li .stepTxt .txtTag.darkColor{
+    background: #332c2a;
+}
+.graduation_step_lists > li .stepTxt .txtTag strong{
+    font-weight: 700;
+    font-size: 22px;
+}
+.graduation_step_lists > li .stepTxt .title{
+    font-size: 26px;
+    font-weight: 700;
+}
+.graduation_step_lists > li .stepTxt .subTxt{
+    margin-top: 20px;
+    font-size: 18px;
+    position: relative;
+}
+.sub_graduation03 .graduation_step_lists > li .stepTxt .subTxt:after {
+  content:"";
+  position: absolute;
+  max-width: 150px;
+  width: 100%;
+  height: 1px;
+  background-color: #d9d9d9;
+  left: 50%;
+  bottom: -15px;
+  transform: translateX(-50%)
+} 
+.graduation_step_lists > li .stepTxt .subTxt strong{
+  font-weight: 700;
+}
+.graduation_checklists {
+    padding-left: 90px;
+    margin-top: 15px;
+    padding-top: 15px;
+    position: relative;
+    text-align: left;
+}
+.graduation_checklists > li{
+    padding-left: 25px;
+    background: url(../images/sub1/sub01_checker.png) no-repeat;
+    background-size: 20px;
+    background-position: left;
+    height: 20px;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+.graduation_checklists > li:after {
+  content: "";
+  position: absolute;
+  width: calc(100% - 20px);
+  height: 4px;
+  background: #fedbed;
+  left: 25px;
+  bottom: 0;
+  z-index: -1;
+}
+.system_lists_capture {
+    background: #f6f7f9;
+    position: relative;
+    padding: 100px 92px;
+    }
+.system_lists_capture:before {content: "";background: #f6f7f8;position: absolute;width: 100vw;/* left: -730px; */top: 0;height: 100%;left: 50%;                    /* 추가 */transform: translateX(-50%);z-index: -1;box-sizing: border-box;z=: -;}
+.system_lists_capture ul {
+    display: flex;
+}
+.system_lists_capture ul > li{
+    flex: 1;
+}
+.system_lists_capture ul > li.center{
+  margin: 0 -80px
+}
+.system_lists_capture ul > li .capImg{
+    width: 100%;
+    display: block;
+}
+.system_txt {
+    text-align: center;
+    font-weight: 300;
+    line-height: 1.4;
+    font-size: 24px;
+    margin-top: 40px;
+}
+.system_txt strong{
+    font-weight: 700;
+}
+.special_graduation_package {
+    background: #554c4a;
+    color: #fff;
+    padding-bottom: 138px;
+}
+.special_graduation_package .numberingMent{
+    padding-top: 115px;
+}
+.special_graduation_package .numberingMent .ment2 {
+    margin-bottom: 50px;
+}
+.special_graduation_package .numberingMent .ment2 em{
+    color: #d589c4;
+}
+.compareImg {
+    margin: 20px auto 0;
+    display: block;
+}
+.compareImg > img{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    max-width: fit-content;
+}
+.recommend_target {background-color: #e8e3e3;}
+.recommend_target .graduation_numbering  {margin-top: 0;}
+.recommend_target .graduation_numbering .numberingMent  {padding-top: 150px; margin-bottom: 0;}
+.recommend_lists {
+    padding: 0 290px;
+    padding-bottom: 150px;
+}
+.recommend_lists li{
+    background: #f6f7f8 url(../images/sub1/sub01_checker.png) no-repeat 45px center;
+    border-radius: 40px;
+    color: #554c4a;
+    display: flex;
+    height: 78px;
+    margin-top: 10px;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 300;
+    padding-left: 96px;
+}
+.recommend_lists li p {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.recommend_lists li span {
+  position: absolute;
+  font-size: 14px;
+  font-weight: 500;
+  top: 34px;
+}
+.recommend_lists li p em{
+    font-weight: 700;
+}
+/* 4-2. 그램한약의 특별함*/
+.sub_spirit .subContainer { position: relative; z-index: 2; }
+.sub_spirit > div { padding-top: 75px; padding-bottom: 170px; position: relative; }
+.sub_spirit .spirit01 { background: #e8e3e3; }
+.sub_spirit .spirit01:after { position: absolute; content: ""; background: url(../images/sub2/sub02_content2.png); width: 698px; height: 486px; right: 0; bottom: 0; opacity: 0.2; z-index: 1; }
+.sub_spirit .spirit02:after { position: absolute; content: ""; background: url(../images/sub2/sub02_content8.png); /* position: absolute; */ /* content: ""; */ /* background: url(../images/sub2/sub02_content2.png); */
+  width: 662px; height: 486px; left: 0; bottom: 0; opacity: 1; z-index: 1; }
+.sub_spirit .oriental_character { position: relative; }
+.sub_spirit .oriental_character > img { max-width: 1156px; width: 100%; margin: 0 auto; display: block; }
+.sub_spirit .oriental_character > div { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center; }
+.sub_spirit .oriental_character p { font-size: 40px; margin-bottom: 27px; font-family: "Noto Serif Korean"; font-weight: 700; }
+.sub_spirit .oriental_character span { font-size: 20px; }
+.sub_spirit .spirit_content { width: 100%; display: flex; justify-content: space-between; margin-top: 40px; gap: 120px; padding: 0 64px 0 130px; }
+.sub_spirit .spirit_content.rotation { flex-direction: row-reverse; padding: 0 64px 0 55px; }
+.sub_spirit .keyword_box { width: 50%; margin-top: 57px; /* padding-left: 130PX; */
+}
+.sub_spirit .keyword_box .keyword { color: #a49b9b; font-size: 16px; }
+.sub_spirit .keyword_box .keyword_subtxt { margin-top: 60px; border-left: 2px solid #cb8ebd; padding-left: 20px; font-size: 18px; line-height: 1.6; }
+.sub_spirit .img_box {
+}
+.sub_spirit .img_box.radius_right_top { width: 612px; aspect-ratio: 612 / 350; overflow: hidden; border-radius: 0 100px 0 0; flex: 0 0 auto; }
+.sub_spirit .img_box.radius_left_top { width: 612px; aspect-ratio: 612 / 350; overflow: hidden; border-radius: 100px 0 0 0; flex: 0 0 auto; }
+.sub_spirit .img_box > img { object-fit: cover; width: 100%; height: 100%; }
+.sub_gram_special {
+}
+.sub_gram_special .subContainer { padding: 0 82px 0 56px; }
+.sub_gram_special .special_content {
+}
+.sub_gram_special .special_content .special_content_box { display: flex; margin-top: 120px; justify-content: space-between; }
+.sub_gram_special .special_content02 .special_content_box, .sub_gram_special .special_content03 .special_content_box { margin-top: 0; }
+.sub_gram_special .special_content01 { background: #f6f7f8; padding-top: 150px; padding-bottom: 157px; }
+.sub_gram_special .special_content02 { padding: 140px 0; }
+.sub_gram_special .special_content03 { padding: 150px 0 138px; background: #554c4a; color: #fff; }
+.sub_gram_special .special_content_txt { /* margin-top: 120px; */ /* display: flex; */
+}
+.sub_gram_special .special_content_txt .tag { color: #a49b9b; display: inline-flex; font-size: 16px; align-items: baseline; gap: 3px; margin-bottom: 26px; border-bottom: 1px solid #cb8ebd; }
+.sub_gram_special .special_content_txt .tag em { font-size: 28px; font-weight: 700; }
+.sub_gram_special .content_txt_01 { font-size: 30px; margin-bottom: 28px; }
+.sub_gram_special .content_txt_01 strong { font-weight: 700; }
+.sub_gram_special .content_txt_02 { line-height: 1.6; }
+.special_content_icolists { display: flex; }
+.special_content_icolists > li { width: 260px; height: 260px; border-radius: 50%; border: 2px solid #e4bbd5; display: flex; gap: 33px; align-items: center; flex-direction: column; /* box-shadow: inset 0 0 9px 0 rgba(201, 125, 177, 0.33); */
+  box-shadow: inset 0 0 9px 0 rgba(201, 125, 177, 0.5), inset 0 0 15px 0 rgba(201, 125, 177, 0.2); justify-content: center; text-align: center; }
+.special_content_icolists > li:nth-child(2) { margin: 0 -24px; }
+.special_content_icolists > li > img { width: 73px; margin-top: 33px; }
+.special_content_icolists > li:nth-child(2) > img { width: 90px; }
+.special_content02 .special_content_icolists > li > img { width: 96px; }
+.special_content02 .special_content_icolists > li:last-child > img { width: 104px; }
+.special_content02 .special_content_icolists > li:last-child span { /* margin-top: -10px; */
+  transform: translateY(-12px); }
+.special_content_icolists > li > span { font-weight: 500; font-size: 18px; }
+.sub_gram_special .special_content02 .special_content_icolists > li > span { font-size: 22px; }
+.sub_gram_special .special_content03 .tag {
+}
+.make_history_lists { display: flex; gap: 16px; margin-right: 50px; }
+.make_history_lists > li { width: 100%; max-width: 214px; }
+.make_history_lists > li > img { width: 100%; display: block; }
+.make_history_lists > li > span { text-align: center; font-size: 22px; font-weight: 500; margin-top: 26px; display: block; }
 /* footer */
 footer { background: #1d1d1d; text-align: center; padding-top: 123px; padding-bottom: 115px; padding: 123px 54px 115px; color: #fff; font-family: "Pretendard", sans-serif; }
 footer .footer_logo { margin-bottom: 52px; }
@@ -222,6 +685,7 @@ footer .fee_link { font-weight: 500; color: #848080; font-size: 14px; }
   .ctaForm form { margin-left: 50px; margin-right: 50px; }
 }
 @media (max-width:1024px) {
+  header + main { margin-top: 70px; }
   .main_speciality { margin-top: 100px; }
   .main_speciality img { width: 300px; margin-bottom: 40px; }
   .main_banner_slider .swiper-pagination { gap: 18px; }
@@ -311,11 +775,15 @@ footer .fee_link { font-weight: 500; color: #848080; font-size: 14px; }
   footer .footer_link01 li:last-child:after { display: none; }
   footer .footer_link01 { margin-bottom: 25px; }
   footer .footer_infolist { font-size: 16px; }
-  footer .sns_list li {width: 60px; height: 60px; flex: 0 0 auto;}
-  footer .sns_list li a img{ width: 28px;}
-  footer .sns_list {margin-bottom: 35px;}
-  footer .copyright,
-  footer .fee_link {font-size: 12px;}
+  footer .sns_list li { width: 60px; height: 60px; flex: 0 0 auto; }
+  footer .sns_list li a img { width: 28px; }
+  footer .sns_list { margin-bottom: 35px; }
+  footer .copyright, footer .fee_link { font-size: 12px; }
+  .sub_banner { aspect-ratio: 800 / 1089; }
+  .sub_banner .subContainer { align-items: flex-end; padding-bottom: 100px; }
+  .sub_banner .sub_banner_txt .txt1 { font-size: 18px; margin-bottom: 10px; }
+  .sub_banner .sub_banner_txt .txt2 { margin-bottom: 26px; font-size: 40px; }
+  .sub_banner .sub_banner_txt .txt3 { font-size: 15px; }
 }
 @media (max-width:400px) {
   .before_and_after .mentBox { padding-bottom: 80px; }
@@ -385,4 +853,8 @@ footer .fee_link { font-weight: 500; color: #848080; font-size: 14px; }
   footer .footer_logo img { width: 82px; }
   footer .footer_link01 li a { font-size: 12px; }
   footer .footer_infolist { font-size: 14px; margin-bottom: 35px; }
+  .sub_banner .subContainer { padding-bottom: 75px; }
+  .sub_banner .sub_banner_txt .txt1 { font-size: 13px; margin-bottom: 8px; }
+  .sub_banner .sub_banner_txt .txt2 { font-size: 30px; margin-bottom: 20px; }
+  .sub_banner .sub_banner_txt .txt3 { font-size: 11px; }
 }

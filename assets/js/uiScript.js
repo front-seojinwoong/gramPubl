@@ -107,4 +107,77 @@ $(document).ready(function () {
       },
     },
   });
+
+
+   let isMapInitialized = false;
+
+      function initMap() {
+        const mapContainer = document.querySelector('.kakaoMapBox');
+        if (!mapContainer) return;
+
+        const mapWidth = mapContainer.offsetWidth;
+        let mapHeight;
+
+        if (window.innerWidth <= 1024) {
+          // 1024px 이하: 8:5 비율
+          mapHeight = Math.round(mapWidth * 1 / 2);
+        } else {
+          // 1024px 초과: 고정 550px
+          mapHeight = 550;
+        }
+
+        // 기존 지도가 있으면 제거
+        const existingMap = document.getElementById('daumRoughmapContainer1761663390002');
+        if (existingMap) {
+          existingMap.innerHTML = '';
+        }
+
+        new daum.roughmap.Lander({
+          timestamp: "1761663390002",
+          key: "2d2qazyvrneh",
+          mapHeight: mapHeight.toString(),
+        }).render();
+      }
+
+      function updateMapHeight() {
+        if (!isMapInitialized) return;
+
+        const mapContainer = document.querySelector('.kakaoMapBox');
+        if (!mapContainer) return;
+
+        const mapWidth = mapContainer.offsetWidth;
+        let mapHeight;
+
+        if (window.innerWidth <= 1024) {
+          mapHeight = Math.round(mapWidth * 5 / 8);
+        } else {
+          mapHeight = 550;
+        }
+
+        const mapIframe = document.querySelector('#daumRoughmapContainer1761663390002 iframe');
+        if (mapIframe) {
+          mapIframe.style.height = mapHeight + 'px';
+        }
+      }
+
+      // DOM 로드 후 초기 실행
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+          initMap();
+          isMapInitialized = true;
+        });
+      } else {
+        initMap();
+        isMapInitialized = true;
+      }
+
+      // resize 이벤트 처리 (디바운싱)
+      let resizeTimer;
+      window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+          updateMapHeight();
+        }, 250);
+      });
 });
+
