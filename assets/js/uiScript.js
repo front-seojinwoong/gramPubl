@@ -41,21 +41,21 @@ $(document).ready(function () {
         )
       )
     );
-  }); // �� �쇳몴李띻린 泥섎━, �レ옄留� �낅젰
+  }); 
   $(document).on("keyup", "input.numberOnly", function () {
     $(this).val(
       $(this)
         .val()
         .replace(/[^0-9]/gi, "")
     );
-  }); // �レ옄留� �낅젰
+  }); 
   $(document).on("keyup", "input.datetimeOnly", function () {
     $(this).val(
       $(this)
         .val()
         .replace(/[^0-9:\-]/gi, "")
     );
-  }); // �꾪솕踰덊샇 �レ옄留� �낅젰
+  }); 
 
   // Main Banner Swiper
   new Swiper(".main_banner_slider", {
@@ -70,7 +70,7 @@ $(document).ready(function () {
     },
     speed: 1000,
     pagination: {
-      el: ".swiper-pagination",
+      el: ".main_banner_slider .swiper-pagination",
       clickable: true,
     },
   });
@@ -84,8 +84,8 @@ $(document).ready(function () {
     },
     speed: 1000,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".beforeafterSwiper .swiper-button-next",
+      prevEl: ".beforeafterSwiper .swiper-button-prev",
     },
   });
 
@@ -179,5 +179,40 @@ $(document).ready(function () {
           updateMapHeight();
         }, 250);
       });
+
+
+       // 썸네일 스와이퍼 초기화
+        var galleryThumbs = new Swiper('.galleryThumbs', {
+          spaceBetween: 13,
+          slidesPerView: 5,
+          freeMode: true,
+          watchSlidesProgress: true,
+          navigation: {
+            nextEl: '.gallery_section .swiper-button-next',
+            prevEl: '.gallery_section .swiper-button-prev',
+          },
+          breakpoints: {
+            // 1024px 이하에서 3개로 표시
+            330: {
+              slidesPerView: 2,
+              spaceBetween: 8
+            },
+            400: {
+              slidesPerView: 3,
+              spaceBetween: 8
+            },
+            1025: {
+              slidesPerView: 5,
+              spaceBetween: 13
+            }
+          }
+        });
+
+        var galleryMain = new Swiper('.galleryMain', {
+          spaceBetween: 10,
+          thumbs: {
+            swiper: galleryThumbs,
+          },
+        });
 });
 

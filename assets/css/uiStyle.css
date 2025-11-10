@@ -6,7 +6,9 @@ body:has(.moGnbMenu.active), html:has(.moGnbMenu.active) { overflow-y: hidden; }
 .pageContainer03 { max-width: 1770px; width: 100%; margin-left: 0px; margin-right: auto; padding: 0px 20px 0px 0px; }
 .pageContainer04 { max-width: 1672px; width: 100%; margin: 0px auto; display: flex; }
 .subContainer { max-width: 1460px; width: 100%; margin: 0px auto; }
-.subContainer02 { max-width: 1240px; width: 100%; margin: 0px auto; padding: 0px 20px; }
+.subContainer02 {max-width: 1240px;width: 100%;margin: 0px auto;padding: 0px 20px;}
+.subContainer03 {max-width: 1320px;width: 100%;margin: 0px auto;padding: 0px 20px;}
+.subContainer04 {max-width: 1320px;width: 100%;margin: 0px auto;padding: 0px 20px;}
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px; }
 .mo_ver { display: none !important; }
 header { position: fixed; top: 0px; left: 0px; width: 100%; z-index: 100; background: rgb(255, 255, 255); height: 100px; }
@@ -450,6 +452,175 @@ footer .fee_link { font-weight: 500; color: rgb(132, 128, 128); font-size: 14px;
 }
 
 
+      /* Gallery Section */
+      .gallery_section {
+        padding: 160px 0 200px;
+        background: #fff;
+      }
+
+      /* 메인 이미지 영역 */
+      .gallery_main {
+        margin-bottom: 80px;
+        /* border-radius: 12px; */
+        overflow: hidden;
+        max-width: 1200px;
+        margin: 0 auto 80px;
+      }
+
+      .galleryMain {
+        width: 100%;
+        height: 700px;
+      }
+
+      .galleryMain .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f8f8f8;
+      }
+
+      .galleryMain .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      /* 썸네일 영역 */
+      .gallery_thumbs {
+        position: relative;
+        padding: 0;
+        margin: 0 auto;
+      }
+
+      .galleryThumbs {
+        max-width: 1200px;
+        height: 140px;
+        width: 100%;
+      }
+
+      .galleryThumbs .swiper-slide {
+        cursor: pointer;
+        /* opacity: 0.6; */
+        transition: opacity 0.3s;
+        /* border-radius: 8px; */
+        overflow: hidden;
+      }
+
+      .galleryThumbs .swiper-slide:hover {
+        /* opacity: 0.8; */
+      }
+
+      .galleryThumbs .swiper-slide-thumb-active {
+        opacity: 1;
+        border: 5px solid #CB8EBD;
+        box-sizing: border-box;
+      }
+
+      .galleryThumbs .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* Swiper 버튼 커스텀 */
+      .gallery_section .swiper-button-prev,
+      .gallery_section .swiper-button-next {
+        width: 16px;
+        top: 50%;
+        height: 29px;
+        transform: translateY(7px);
+        background: url(
+        '../images/sub/ico_arrow_left.png') no-repeat;
+        /* border-radius: 50%; */
+        /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); */
+      }
+
+      .gallery_section .swiper-button-prev {
+        left: 0;
+      }
+
+      .gallery_section .swiper-button-next {
+        /* right: 0; */
+        /* width: 16px; */
+        /* top: 50%; */
+        right: 0;
+        /* height: 29px; */
+        /* transform: translateY(7px); */
+        background: url(../images/sub/ico_arrow_right.png) no-repeat;
+        /* border-radius: 50%; */
+        /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); */
+      }
+
+      .gallery_section .swiper-button-prev:after,
+      .gallery_section .swiper-button-next:after {
+        font-size: 18px;
+        color: #333;
+        font-weight: bold;
+        display: none;
+      }
+
+      /* 1024px 이하 반응형 */
+      @media (max-width: 1024px) {
+        .gallery_section {
+          padding: 60px 0;
+        }
+
+        .galleryMain {
+          height: auto;
+        }
+
+        .galleryThumbs {
+          height: 100%;
+        }
+
+        .gallery_thumbs {
+          padding: 0 30px;
+        }
+
+        .gallery_thumbs .swiper-button-prev,
+        .gallery_thumbs .swiper-button-next {
+          /* width: 35px; */
+          /* height: 35px; */
+        }
+
+        .gallery_thumbs .swiper-button-prev:after,
+        .gallery_thumbs .swiper-button-next:after {
+          font-size: 16px;
+        }
+      }
+
+      /* 모바일 반응형 */
+      @media (max-width: 400px) {
+        .gallery_section {
+          padding: 40px 0;
+        }
+
+        .galleryMain {
+          height: 300px;
+        }
+
+        .galleryThumbs {
+          height: 100px;
+        }
+
+        .gallery_thumbs {
+          padding: 0 40px;
+        }
+
+        .gallery_thumbs .swiper-button-prev,
+        .gallery_thumbs .swiper-button-next {
+          width: 30px;
+          height: 30px;
+        }
+
+        .gallery_thumbs .swiper-button-prev:after,
+        .gallery_thumbs .swiper-button-next:after {
+          font-size: 14px;
+        }
+      }
+
+
 @media (max-width:1700px) {
     .before_and_after .mentBox > div { margin-left: auto; }
     .before_and_after .beforeafterSwiper { margin-left: -350px; width: calc(100% + 350px); }
@@ -475,6 +646,7 @@ footer .fee_link { font-weight: 500; color: rgb(132, 128, 128); font-size: 14px;
 }
 /* m1 */
 @media (max-width:1024px) {
+    .gallery_main {margin-bottom: 40px;}
     .doctorIntroduce .careerTit {font-size: 20px; margin-bottom: 10px;}
     .doctorIntroduce .careerLists li {font-size: 20px;}
     .doctorIntroduce .careerBox h3 {font-size: 30px;margin-bottom: 80px;}
