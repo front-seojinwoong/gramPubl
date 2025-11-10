@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>그램</title>
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/uiReset.css" />
+    <link rel="stylesheet" href="./assets/css/uiStyle.css" />
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/uiScript.js"></script>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=test_client_id"></script>
+    <script charset="UTF-8" class="daum_roughmap_loader_script" src= "https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+  </head>
+  <body>
+    <div id="wrap" class="subPage">
+      <header>
+        <div class="headerBg"></div>
+        <div class="pageContainer">
+          <h1>
+            <a href="#">
+              <img
+                class="pc_ver"
+                src="./assets/images/common/ico_logo.png"
+                alt="gram 그램한의원"
+              />
+              <img
+                class="mo_ver"
+                style="width: 82px"
+                src="./assets/images/common/mo_main_logo.png"
+                alt="gram 그램한의원"
+              />
+            </a>
+          </h1>
+          <div class="gnbWrap">
+            <nav id="gnb" class="pc_ver">
+              <ul class="depth1">
+                <li class="has-sub">
+                  <a href="#none">그램 스토리</a>
+                  <ul class="depth2">
+                    <li><a href="#none">다이어트 하나만</a></li>
+                    <li><a href="#none">의료진 소개</a></li>
+                    <li><a href="#none">병원 둘러보기</a></li>
+                    <li><a href="#none">진료안내/오시는길</a></li>
+                  </ul>
+                </li>
+                <li class="has-sub">
+                  <a href="#none">다이어트 한약</a>
+                  <ul class="depth2">
+                    <li><a href="#none">그램 한약의 특별함</a></li>
+                    <li><a href="#none">다이어트 졸업 패키지</a></li>
+                    <li><a href="#none">맞춤 탕약</a></li>
+                    <li>
+                      <a href="#none">그램 환<br />(베이직/프리미엄)</a>
+                    </li>
+                    <li><a href="#none">그램 한약 종류</a></li>
+                  </ul>
+                </li>
+                <li class="has-sub">
+                  <a href="#none">그램 체형관리</a>
+                  <ul class="depth2">
+                    <li><a href="#none">GRAM 약침</a></li>
+                    <li><a href="#none">노블 쉐이프</a></li>
+                  </ul>
+                </li>
+                <li><a href="#none">프로모션</a></li>
+                <li><a href="#none">그램 후기</a></li>
+                <li><a href="#none">온라인 예약</a></li>
+              </ul>
+            </nav>
+            <button class="allMenuBox pc_ver">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <button class="allMenuBox flexBox mo_ver">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <div class="moGnbMenu mo_ver">
+              <div class="moGnbMenu__header">
+                <h2>
+                  <img
+                    src="./assets/images/common/mo_main_logo_white.png"
+                    alt="gram 그램 한의원"
+                  />
+                </h2>
+                <button class="closeMoGnb">
+                  <img
+                    src="./assets/images/common/mo_gnb_close.png"
+                    alt="닫기"
+                  />
+                </button>
+              </div>
+              <div class="moGnbMenu__body">
+                <ul class="moGnb__list">
+                  <li class="moGnb__item has-sub active">
+                    <div class="moGnb__title">
+                      <span>그램 스토리</span>
+                    </div>
+                    <ul class="moGnb__submenu">
+                      <li><a href="#none">다이어트 하나만</a></li>
+                      <li><a href="#none">의료진 소개</a></li>
+                      <li><a href="#none">병원 둘러보기</a></li>
+                      <li><a href="#none">진료안내 / 오시는 길</a></li>
+                    </ul>
+                  </li>
+                  <li class="moGnb__item has-sub">
+                    <div class="moGnb__title">
+                      <span>다이어트 한약</span>
+                    </div>
+                    <ul class="moGnb__submenu">
+                      <li><a href="#none">그램 한약의 특별함</a></li>
+                      <li><a href="#none">다이어트 졸업 패키지</a></li>
+                      <li><a href="#none">맞춤 탕약</a></li>
+                      <li><a href="#none">그램 환 (베이직/프리미엄)</a></li>
+                      <li><a href="#none">그램 한약 종류</a></li>
+                    </ul>
+                  </li>
+                  <li class="moGnb__item has-sub">
+                    <div class="moGnb__title">
+                      <span>그램 체형관리</span>
+                    </div>
+                    <ul class="moGnb__submenu">
+                      <li><a href="#none">GRAM 약침</a></li>
+                      <li><a href="#none">노블 쉐이프</a></li>
+                    </ul>
+                  </li>
+                  <li class="moGnb__item">
+                    <div class="moGnb__title">
+                      <span>프로모션</span>
+                    </div>
+                  </li>
+                  <li class="moGnb__item">
+                    <div class="moGnb__title">
+                      <span>그램 후기</span>
+                    </div>
+                  </li>
+                  <li class="moGnb__item">
+                    <div class="moGnb__title">
+                      <span>온라인 예약</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <!-- sub_banner [S] -->
+        <div class="sub_banner sml">
+          <div class="inner">
+             <img
+                class="pc_ver bg"
+                src="./assets/images/sub/sub05_banner.jpg"
+                alt=""
+              />
+              <img
+                class="mo_ver bg"
+                src="./assets/images/sub/mo_sub05_banner.jpg"
+                alt=""
+              />
+          </div>
+          <div class="subContainer">
+              <div class="sub_banner_txt">
+                <p class="txt1">
+                  Preview
+                </p>
+                <p class="txt2"><strong>병원 둘러보기</strong></p>
+                <p class="txt3">
+                  믿을 수 있는 치료환경을 갖추고 있습니다.
+                </p>
+              </div>
+          </div>
+        </div>
+        <!-- sub_banner [E] -->
+
+      
+
+      </main>
+
+      <footer>
+        <h2 class="footer_logo">
+          <img
+            src="./assets/images/main/main_logo_white_md.png"
+            alt="그램한의원"
+          />
+        </h2>
+        <ul class="footer_link01">
+          <li><a href="#">개인정보취급방침</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">미성년자동의서 다운로드</a></li>
+        </ul>
+        <ul class="footer_infolist">
+          <li>06114) 서울 강남구 강남대로 526 2층</li>
+          <li><i>· </i>대표원장 : 이영채</li>
+          <li><i>· </i>사업자등록번호 : 861-14-02642</li>
+          <li><i>· </i>대표전화 : 02-516-0912</li>
+        </ul>
+        <ul class="sns_list">
+          <li>
+            <a href="#"
+              ><img src="./assets/images/main/ico_sns_kakao.png" alt="카카오"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="./assets/images/main/ico_sns_insta.png"
+                alt="인스타그램"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="./assets/images/main/ico_sns_naverblog.png"
+                alt="네이버블로그"
+            /></a>
+          </li>
+        </ul>
+        <p class="copyright">
+          COPYRIGHT 2025 GRAM CLINIC. ALL RIGHTS RESERVED. MADE BY DPWORKS
+        </p>
+        <a href="#" class="fee_link">비급여수가표</a>
+      </footer>
+    </div>
+  </body>
+</html>
