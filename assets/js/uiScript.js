@@ -58,22 +58,22 @@ $(document).ready(function () {
   }); 
 
   // Main Banner Swiper
-  new Swiper(".main_banner_slider", {
-    effect: "fade",
-    fadeEffect: {
-      crossFade: true,
-    },
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    speed: 1000,
-    pagination: {
-      el: ".main_banner_slider .swiper-pagination",
-      clickable: true,
-    },
-  });
+  // new Swiper(".main_banner_slider", {
+  //   effect: "fade",
+  //   fadeEffect: {
+  //     crossFade: true,
+  //   },
+  //   loop: true,
+  //   autoplay: {
+  //     delay: 5000,
+  //     disableOnInteraction: false,
+  //   },
+  //   speed: 1000,
+  //   pagination: {
+  //     el: ".main_banner_slider .swiper-pagination",
+  //     clickable: true,
+  //   },
+  // });
 
   // Before After Swiper
   new Swiper(".beforeafterSwiper", {
