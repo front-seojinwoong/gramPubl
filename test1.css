@@ -3766,7 +3766,7 @@ footer .fee_link {
 
 /* m1 */
 @media (max-width: 1024px) {
-  .recommendImg  {max-width: 741px;width: 100%; padding-bottom: 100px;}
+  .recommendImg  {max-width: 741px;width: 100%;}
   .recommend_lists li span {top:25px}
   .recommend_lists li {font-size: 18px;background-size: 20px;padding-left: 76px;height: auto;flex-wrap: wrap;align-items: flex-start;background-position-y: 15px;padding-top: 11px;padding-bottom: 27px;}
   .recommend_target .graduation_numbering .numberingMent {padding-top: 100px;}
@@ -5209,8 +5209,6 @@ footer .fee_link {
 
 /* m2 */
 @media (max-width: 400px) {
-    .recommendImg  {padding-bottom: 50px;}
-    .recommend_target .graduation_numbering .numberingMent {padding-top: 50px;}
   .recommend_target .graduation_numbering .numberingMent {padding-top: 60px;}
   .special_graduation_package {padding-bottom: 58px;}  
   .graduation_numbering .numberingMent .ment4 {font-size: 13px;}
@@ -5983,3 +5981,4 @@ footer .fee_link {
     }
 }
 
+v
