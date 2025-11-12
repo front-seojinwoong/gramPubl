@@ -152,7 +152,7 @@
 
       <main>
         <!-- sub_banner [S] -->
-        <div class="sub_banner sml">
+        <div class="sub_banner">
           <div class="inner">
              <img
                 class="pc_ver bg"
@@ -280,18 +280,6 @@
                                 
                                 <div class="input_box select_doctor_wrap">
                                     <label class="">의료진 선택</label>
-                                    <!-- div class="select_doctor_box_wrapper">
-                                        <div class="select_doctor_box">
-                                            <p class="name">가장 빠른 진료/수술</p>
-                                            <button type="button" class="grey_btn choice_btn">선택</button>
-                                        </div>
-                                        <div class="select_lists">
-                                            <p class="item">옵션1</p>
-                                            <p class="item">옵션2</p>
-                                            <p class="item">옵션3</p>
-                                        </div>
-                                    </div -->
-
                                     <div class="doctor_result_wrap">
                                         <div class="doctor" id="doctor01_wrap">
                                            <img src="./assets/images/sub/reservation_doctor_profile01.jpg" alt=""/>
@@ -303,6 +291,15 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="call_consult_check_wrap">
+											<p class="tit">
+												상담 후 결정
+												<span>(전화상담 후 희망 시술에 따라 결정됩니다.)</span>
+											</p>
+										
+											<input type="radio" id="isCallConsult" name="aftercall" value="Y">
+											<label for="isCallConsult" class="grey_btn">선택</label>
+										</div>
                                     </div>
                                 </div>
                                 </div>
@@ -317,26 +314,16 @@
                                 </div>
                                 <div class="input_box_wrapper">
                                     <div class="input_box">
-                                        <div class="selected_doctor">
-                                            <div class="doctor_result_wrap">
-                                              <div class="doctor" id="doctor01_wrap">
-                                                <img src="./assets/images/sub/reservation_doctor_profile01.jpg" alt=""/>
-                                                  <div class="doctor_info">
-                                                      <p class="doc_name">이영채 원장</p>
-                                                      <div class="btn_wrap">
-                                                          <button type="button" class="grey_btn choice_doc" id="doctor01" value="이영채 원장">의료진 선택</button>
-                                                          <button type="button" class="grey_btn view_profile">프로필</button>
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                        </div>
+                                      <div class="selected_doctor"></div>
                                         
-										<div class="datepicker_wrap">
-	                                        <div id="datepicker_1" class="doctor_schedule doctor_schedule_1"></div>
-											<div class="datepicker_layer">
-											</div>
-										</div>
+                                      <div class="datepicker_wrap">
+                                          <div id="datepicker_1" class="doctor_schedule doctor_schedule_1"></div>
+                                          <div id="datepicker_4" class="doctor_schedule doctor_schedule_4"></div>
+
+                                        <div class="datepicker_layer">
+                                          의료진을 먼저 선택해주세요
+                                        </div>
+                                      </div>
                                     </div>
                                 
                                     <div class="input_box time_select_box">
@@ -412,7 +399,7 @@
                                                 <label for="time_18_00">18:00</label>
                                             </div>
                                             <div class="check_item">
-                                                <input type="radio" name="reserve_time" value="18:30" id="time_18_30">
+                                                <input type="radio" name="reserve_time" value="18:30" id="time_18_30" disabled>
                                                 <label for="time_18_30">18:30</label>
                                             </div>
                                         </div>
@@ -526,6 +513,24 @@
 	<script src="./assets/js/code.jquery.com_jquery-1.12.4.js"></script>
 	<script src="./assets/js/code.jquery.com_ui_1.12.1_jquery-ui.js"></script>
   <script>
+	  var disabledSpecificDates = ["2025-09-17","2025-10-03","2025-10-04","2025-10-06","2025-10-07","2025-10-08"];		// 김지연 원장
+	  var addSpecificDates = ["2025-10-02"];		// 김지연 원장
+	  function disableSpecificDaysAndDates(date) {
+		var day = date.getDay(); // 0: 일요일, 1: 월요일, ..., 6: 토요일
+		var stringDate = $.datepicker.formatDate('yy-mm-dd', date);
+
+		if (day === 0 || day === 4) { // 3은 수요일
+		  if (addSpecificDates.indexOf(stringDate) != -1) {
+			  return [true, "", ""];
+		  }else{
+			  return [false, "ui-state-disabled ui-state-disabled-custom", "선택 불가"];
+		  }
+		}
+		if (disabledSpecificDates.indexOf(stringDate) != -1) {
+		  return [false, "ui-state-disabled ui-state-disabled-custom", "선택 불가"];
+		}
+		return [true, "", ""];
+	  }
         $(function() {
          
 			$(".doctor_schedule_1").datepicker({ /* 김지연 원장 일, 목 선택불가 */  
@@ -548,9 +553,108 @@
 //					var day = date.getDay();
 //				    return [(day != 0 && day != 4)];      
 //				}  
+				,beforeShowDay: disableSpecificDaysAndDates
             });  
 
+            $(".doctor_schedule_4").datepicker({ /* 상담후 결정 - 일요일만 휴무 */
+				dateFormat: 'yy-mm-dd' //달력 날짜 형태
+                ,showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
+                ,showMonthAfterYear:true // 월- 년 순서가아닌 년도 - 월 순서
+                ,changeYear: true //option값 년 선택 가능
+                ,changeMonth: true //option값  월 선택 가능                
+                ,showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시  
+                ,buttonImageOnly: true //버튼 이미지만 깔끔하게 보이게함
+                ,buttonText: "선택" //버튼 호버 텍스트              
+                ,yearSuffix: "년" //달력의 년도 부분 뒤 텍스트
+                ,monthNamesShort: ['01월','02월','03월','04월','05월','06월','07월','08월','09월','10월','11월','12월'] //달력의 월 부분 텍스트
+                ,monthNames: ['01월','02월','03월','04월','05월','06월','07월','08월','09월','10월','11월','12월'] //달력의 월 부분 Tooltip
+                ,dayNamesMin: ['일','월','화','수','목','금','토'] //달력의 요일 텍스트
+                ,dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'] //달력의 요일 Tooltip
+                ,minDate: "-5Y" //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
+                ,maxDate: "+5y" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)  
+                ,beforeShowDay: function(date){   
+					var day = date.getDay();
+				    return [(day != 0 )];      
+				}  
+            });  
 
-  });
+			var t1=t2=t3=t4=0;
+			$(".call_consult_check_wrap").click(function() {
+				if(t1 === 0) {
+					$('.doctor').removeClass('doctor_list_selected');
+					$('.selected_doctor').html($(this).clone()).addClass('noSelect');
+					$(this).toggleClass('active');
+					var checkBoxes = $('#isCallConsult');
+					checkBoxes.prop("checked", true);
+					$('.datepicker_layer, .doctor_schedule').hide();
+					$('.doctor_schedule_4').show();
+					t1 = 1;
+					t2 = t3 = t4 = 0;
+				}
+				
+			});      
+            
+			$('.doctor_schedule').datepicker('setDate', '');	// 달력 누르기 전까진 빈값
+
+            $('.choice_btn').on('click', function() {
+                $('.select_doctor_wrap .select_lists').stop().slideToggle(500);
+            });
+            $('.select_doctor_wrap .select_lists .item').on('click', function() {
+                $('.select_doctor_box .name').text($(this).text());
+                $('.select_doctor_wrap .select_lists').stop().slideUp(500);
+            });
+            
+            $('.doctor_result_wrap .doctor').on('click', function() {
+				$('.call_consult_check_wrap').removeClass('active');
+                var $doctor_html = $(this).clone();
+                $('.selected_doctor').html($doctor_html).removeClass('noSelect');
+				$('.doctor_result_wrap .doctor').removeClass('doctor_list_selected');
+				$(this).addClass('doctor_list_selected');
+				document.reserv.choice_docHidden.value = $(this).find('.choice_doc').val();
+
+				if ( $(this).find('.choice_doc').attr('id') == 'doctor01' ) {
+					if (t2 === 0){
+						$('.datepicker_layer, .doctor_schedule').hide();
+						$('#isCallConsult').prop('checked', false);
+						$('.ui-datepicker').removeClass('doctor_park').removeClass('doctor_jung').addClass('doctor_kim');
+						$('.doctor_schedule_1').show();						
+						t1 = t3 = t4 = 0;
+						t2 = 1;
+					}
+				}
+            });
+			$('.surgeryChoice').on('click', function() {
+				var tmp_text = document.reserv.surgeryChoiceHidden.value;
+				if(tmp_text.includes($(this).val()) == true){
+					document.reserv.surgeryChoiceHidden.value = tmp_text.replace(","+$(this).val(),"");
+				}else{
+					document.reserv.surgeryChoiceHidden.value = tmp_text+","+$(this).val();
+				}
+            });
+        });
+
+		function reservation(){
+			var f = document.reserv;
+			if(f.memberName.value=="" || f.memberPhone.value=="" || f.memberBirth.value==""){
+				alert("필수정보를 입력한 후 접수바랍니다.");
+				return false;
+			}else if(!$("#agree").prop("checked")){
+				alert("개인정보 수집 및 이용에 동의하셔야 예약이 가능합니다.");
+				return false;
+			}else{
+				if(f.choice_docHidden.value == "이영채 원장"){
+					f.reservDateHidden.value = $('.doctor_schedule_1').val();
+				} else{	// 상담 후 결정
+					f.reservDateHidden.value = $('.doctor_schedule_4').val();	
+				}
+
+				if(f.choice_docHidden.value != "" || $('#isCallConsult').prop('checked', true)){	// 의료진을 선택했거나 상담 후 결정을 선택했을때, 날짜 값이 없으면
+					if(f.reservDateHidden.value == "" && f.reserve_time.value != ""){
+						document.reserv.reservDateHidden.value = "2025-11-12";
+					}
+				}
+				return true;
+			}
+		}
      </script>
 </html>
