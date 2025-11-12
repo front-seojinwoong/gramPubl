@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>그램</title>
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/uiReset.css" />
+    <link rel="stylesheet" href="./assets/css/uiStyle.css" />
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/uiScript.js"></script>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=test_client_id"></script>
+    <script charset="UTF-8" class="daum_roughmap_loader_script" src= "https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+  </head>
+  <body>
+    <div id="wrap" class="subPage">
+      <header>
+        <div class="headerBg"></div>
+        <div class="pageContainer">
+          <h1>
+            <a href="#">
+              <img
+                class="pc_ver"
+                src="./assets/images/common/ico_logo.png"
+                alt="gram 그램한의원"
+              />
+              <img
+                class="mo_ver"
+                style="width: 82px"
+                src="./assets/images/common/mo_main_logo.png"
+                alt="gram 그램한의원"
+              />
+            </a>
+          </h1>
+          <div class="gnbWrap">
+            <nav id="gnb" class="pc_ver">
+              <ul class="depth1">
+                <li class="has-sub">
+                  <a href="#none">그램 스토리</a>
+                  <ul class="depth2">
+                    <li><a href="#none">다이어트 하나만</a></li>
+                    <li><a href="#none">의료진 소개</a></li>
+                    <li><a href="#none">병원 둘러보기</a></li>
+                    <li><a href="#none">진료안내/오시는길</a></li>
+                  </ul>
+                </li>
+                <li class="has-sub">
+                  <a href="#none">다이어트 한약</a>
+                  <ul class="depth2">
+                    <li><a href="#none">그램 한약의 특별함</a></li>
+                    <li><a href="#none">다이어트 졸업 패키지</a></li>
+                    <li><a href="#none">맞춤 탕약</a></li>
+                    <li>
+                      <a href="#none">그램 환<br />(베이직/프리미엄)</a>
+                    </li>
+                    <li><a href="#none">그램 한약 종류</a></li>
+                  </ul>
+                </li>
+                <li class="has-sub">
+                  <a href="#none">그램 체형관리</a>
+                  <ul class="depth2">
+                    <li><a href="#none">GRAM 약침</a></li>
+                    <li><a href="#none">노블 쉐이프</a></li>
+                  </ul>
+                </li>
+                <li><a href="#none">프로모션</a></li>
+                <li><a href="#none">그램 후기</a></li>
+                <li><a href="#none">온라인 예약</a></li>
+              </ul>
+            </nav>
+            <button class="allMenuBox pc_ver">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <button class="allMenuBox flexBox mo_ver">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <div class="moGnbMenu mo_ver">
+              <div class="moGnbMenu__header">
+                <h2>
+                  <img
+                    src="./assets/images/common/mo_main_logo_white.png"
+                    alt="gram 그램 한의원"
+                  />
+                </h2>
+                <button class="closeMoGnb">
+                  <img
+                    src="./assets/images/common/mo_gnb_close.png"
+                    alt="닫기"
+                  />
+                </button>
+              </div>
+              <div class="moGnbMenu__body">
+                <ul class="moGnb__list">
+                  <li class="moGnb__item has-sub active">
+                    <div class="moGnb__title">
+                      <span>그램 스토리</span>
+                    </div>
+                    <ul class="moGnb__submenu">
+                      <li><a href="#none">다이어트 하나만</a></li>
+                      <li><a href="#none">의료진 소개</a></li>
+                      <li><a href="#none">병원 둘러보기</a></li>
+                      <li><a href="#none">진료안내 / 오시는 길</a></li>
+                    </ul>
+                  </li>
+                  <li class="moGnb__item has-sub">
+                    <div class="moGnb__title">
+                      <span>다이어트 한약</span>
+                    </div>
+                    <ul class="moGnb__submenu">
+                      <li><a href="#none">그램 한약의 특별함</a></li>
+                      <li><a href="#none">다이어트 졸업 패키지</a></li>
+                      <li><a href="#none">맞춤 탕약</a></li>
+                      <li><a href="#none">그램 환 (베이직/프리미엄)</a></li>
+                      <li><a href="#none">그램 한약 종류</a></li>
+                    </ul>
+                  </li>
+                  <li class="moGnb__item has-sub">
+                    <div class="moGnb__title">
+                      <span>그램 체형관리</span>
+                    </div>
+                    <ul class="moGnb__submenu">
+                      <li><a href="#none">GRAM 약침</a></li>
+                      <li><a href="#none">노블 쉐이프</a></li>
+                    </ul>
+                  </li>
+                  <li class="moGnb__item">
+                    <div class="moGnb__title">
+                      <span>프로모션</span>
+                    </div>
+                  </li>
+                  <li class="moGnb__item">
+                    <div class="moGnb__title">
+                      <span>그램 후기</span>
+                    </div>
+                  </li>
+                  <li class="moGnb__item">
+                    <div class="moGnb__title">
+                      <span>온라인 예약</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <!-- sub_banner [S] -->
+        <div class="sub_banner">
+          <div class="inner">
+             <img
+                class="pc_ver bg"
+                src="./assets/images/sub/sub09_banner.jpg"
+                alt=""
+              />
+              <img
+                class="mo_ver bg"
+                src="./assets/images/sub/mo_sub09_banner.jpg"
+                alt=""
+              />
+          </div>
+          <div class="subContainer">
+              <div class="sub_banner_txt">
+                <p class="txt1">
+                  <strong>gram </strong> diet
+                </p>
+                <p class="txt2"><strong>그램환</strong> (베이직/프리미엄)</p>
+                <p class="txt3">
+                  사람은 모두 다릅니다.
+                 <span>그래서  <strong>그램의 다이어트 한약은 다릅니다.</strong></span>
+                </p>
+              </div>
+          </div>
+        </div>
+        <!-- sub_banner [E] -->
+         
+        <!-- gramMedicine [S] -->
+        <div class="gramSubCon gramMedicine">
+          <div class="subContainer">
+            <h2 class="subCon_title">
+              <span class="subCon_title_sml">
+                <strong>내게 꼭</strong> 맞는 처방
+              </span>
+              <span class="subCon_mainTitle">그램환</span>
+              <span class="subCon_subTitle">개인의 체질, 건강, 감량목표, 생활 습관을 고려하여 처방합니다.</span>
+            </h2>
+            <div class="medicineBox">
+              <div class="left">
+                <img src="./assets/images/sub/sub09_content01.png" alt="">
+                <div>
+                  <p>베이직</p>
+                  <span>다이어트 약 복용이 처음인 분에게<br> 적합한 <strong>베이직 처방</strong></span>
+                </div>
+              </div>
+              <div class="right">
+                <img src="./assets/images/sub/sub09_content02.png" alt="">
+                <div>
+                  <p>베이직</p>
+                  <span>다이어트 경험이 많아 내성이 생긴<br> 분들을 위한 <strong>프리미엄 처방</strong></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- gramMedicine [E] -->
+
+        <!-- medicineBasic [S] -->
+        <div class="gramSubCon medicineBasic">
+          <div class="subContainer">
+            <h2 class="subCon_title leftSide gray">
+              <span class="subCon_title_sml">
+                gram <strong>basic</strong>
+              </span>
+              <span class="subCon_mainTitle">그램환 베이직</span>
+            </h2>
+            <div class="medicineInfo">
+              <p class="subCon_paragraph">
+                그램환 베이직은 다이어트 약 복용이 처음인 분에게 적합한  입문용 처방입니다. <br/>
+                다이어트의 가장 큰 실패 원인 중 하나인 <strong>식욕조절 실패를 조절</strong>하고, <br/>
+                <strong>>교감신경 활성화 및 대사증진</strong>을 통해 <br/>
+                운동보다 <strong>더 효율적으로 체지방과 내장지방을 연소</strong>시킵니다.
+              </p>
+              
+              <div class="effectDiv">
+                <p class="effectDivTag">추천대상</p>
+                <ul class="effectDivLists">
+                  <li>다이어트 초심자</li>
+                  <li>부담스럽지 않게 첫 다이어트를 시작하고 싶으신 분.</li>
+                  <li>운동 및 식이관리 병행이 가능한 분</li>
+                </ul>
+              </div>
+              <div class="effectDiv">
+                <p class="effectDivTag">주요효과</p>
+                <ul class="mainEffectBox">
+                  <li class="pink"><span>식욕조절</span></li>
+                  <li><span>체지방 감량</span></li>
+                </ul>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <!-- medicineBasic [E] -->
+
+        <!-- medicinePremium [S] -->
+        <div class="gramSubCon medicinePremium">
+          <div class="subContainer">
+            <h2 class="subCon_title rightSide gray">
+              <span class="subCon_title_sml">
+                gram <strong>premium</strong>
+              </span>
+              <span class="subCon_mainTitle">그램환 프리미엄</span>
+            </h2>
+            <div class="medicineInfo">
+              <p class="subCon_paragraph">
+                그램환 프리미엄은 다이어트 경험이 많아 내성이 생긴 분들에게 적합한,<br>
+                그램만의 레시피가 담긴 처방입니다.<br/>
+                노하우와 기술력을 바탕으로 제작된 그램환 프리미엄은<br/>
+                오직 그램에서만 처방받을 수 있습니다.<br/>
+                식욕조절, 체지방 & 내장지방 감량의 효과와 더불어,<br/>
+                지방간 감소, 혈당 안정화에 도움을 줍니다. 
+
+              </p>
+              
+              <div class="effectDiv">
+                <p class="effectDivTag">추천대상</p>
+                <ul class="effectDivLists">
+                  <li>다이어트 약 내성이 생기신 분</li>
+                  <li>복부 위주로 살이 찌는 분 </li>
+                  <li>혈당 조절에 어려움을 느끼시는 분</li>
+                  <li>식욕 조절, 체지방 감소, 내장지방 감소를 원하시는 분</li>
+                  <li>근육량 감소 없이 체지방만 빼고싶으신 분</li>
+
+                </ul>
+              </div>
+              <div class="effectDiv">
+                <p class="effectDivTag">주요효과</p>
+                <ul class="mainEffectBox">
+                  <li class="pink"><span>식욕조절</span></li>
+                  <li><span>체지방 감량</span></li>
+                  <li class="pink"><span>지방간 감소</span></li>
+                  <li><span>혈당 안정화</span></li>
+                </ul>
+              </div>
+              <div class="effectDiv">
+                <div class="effectDivRow">
+                  <p class="effectDivTag">제형 선택</p>
+                  <span class="effectDivSub">원하는 제형으로 처방 가능합니다.</span>
+                </div>
+                <ul class="mainEffectBox materialInfo">
+                  <li class="pink">
+                    <span>환</span>
+                    <img
+                      src="./assets/images/sub/sub09_picto01.png"
+                      alt=""
+                    />
+                  </li>
+                  <li class="">
+                    <span>캡슐</span>
+                    <img
+                      src="./assets/images/sub/sub09_picto02.png"
+                      alt=""
+                    />
+                  </li>
+                  <li class="pink">
+                    <span>연조제</span>
+                    <img
+                      src="./assets/images/sub/sub09_picto01.png"
+                      alt=""
+                    />
+                  </li>
+                  <li class="">
+                    <span>환</span>
+                    <img
+                      src="./assets/images/sub/sub09_picto01.png"
+                      alt=""
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <!-- medicinePremium [E] -->
+
+        
+
+
+
+         <!-- main_gramAbility [S] -->
+        <div class="main_gramAbility">
+          <div class="fadeinoutImg">
+            <div class="fadeinoutImgBox0 active">
+              <img
+                class="pc_ver"
+                src="./assets/images/main/main_content10.jpg"
+                alt=""
+              />
+              <img
+                class="mo_ver"
+                src="./assets/images/main/mo_main_content10.jpg"
+                alt=""
+              />
+            </div>
+            <div class="fadeinoutImgBox1">
+              <img
+                class="pc_ver"
+                src="./assets/images/main/main_content11.jpg"
+                alt=""
+              />
+              <img
+                class="mo_ver"
+                src="./assets/images/main/mo_main_content11.jpg"
+                alt=""
+              />
+            </div>
+            <div class="fadeinoutImgBox2">
+              <img
+                class="pc_ver"
+                src="./assets/images/main/main_content12.jpg"
+                alt=""
+              />
+              <img
+                class="mo_ver"
+                src="./assets/images/main/mo_main_content12.jpg"
+                alt=""
+              />
+            </div>
+            <div class="fadeinoutImgBox3">
+              <img
+                class="pc_ver"
+                src="./assets/images/main/main_content13.jpg"
+                alt=""
+              />
+              <img
+                class="mo_ver"
+                src="./assets/images/main/mo_main_content13.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="pageContainer02 noPadding">
+            <div class="tabBox">
+              <img
+                src="./assets/images/main/main_logo_white_sm.png"
+                alt="그램한의원"
+              />
+              <ul>
+                <li class="active">
+                  <a href="javascript:void(0);">그램의 특별한 한약</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">대표원장 1:1 책임진료</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">다이어트 밀착관리</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">요요 없는 다이어트 졸업</a>
+                </li>
+              </ul>
+            </div>
+            <div class="mentBox">
+              <div class="active">
+                <p class="tagMent">Gram <br class="mo_ver" />Special medicine</p>
+                <strong>그램의 특별한 한약</strong>
+                <p class="tagMent2">
+                  <strong>직접 약재 배합</strong>과 농도까지 조정하여<br class="">
+                  개발한 <strong>맞춤형 한약</strong>입니다.<br class="">
+                  <strong>직접 연구·조제에 참여</strong>해<br class="">
+                  퀄리티에 차별화를두고 있습니다.
+                </p>
+              </div>
+              <div class="">
+                <p class="tagMent">1:1 <br class="mo_ver" />medical care</p>
+                <strong>대표원장 1:1 책임진료</strong>
+                <p class="tagMent2">
+                  18,000건 이상 다이어트 처방 노하우의<br>
+                  <strong>대표원장이 1:1 책임 진료를 진행</strong>합니다.
+                  <br>
+                  <br>
+                  진료와 시술, 다이어트 결과 까지 책임감 있게 진행합니다.
+                </p>
+              </div>
+              <div class="">
+                <p class="tagMent">Diet <br class="mo_ver" />management</p>
+                <strong>다이어트 밀착관리</strong>
+                <p class="tagMent2">
+                  다이어트 진행시 마주하는<br>
+                  <strong>돌발상황, 감정 변화, 생활까지 고려한  </strong><br>  
+                  <strong>밀착 관리</strong>로 다이어트 졸업 까지 함께합니다.
+                </p>
+              </div>
+              <div class="">
+                <p class="tagMent">Diet <br class="mo_ver" />Graduation</p>
+                <strong>요요 없는 다이어트 졸업</strong>
+                <p class="tagMent2">
+                  <strong>만족도 높은 감량</strong>과 더불어 <strong>건강한 감량</strong>을 진행합니다.<br><br>
+                  체질 개선을 통해서,<br>
+                  <strong>요요 없는 다이어트 졸업</strong>을 제시합니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- main_gramAbility [E] -->
+        <!-- hospitalInfo [S] -->
+        <div class="hospitalInfo">
+          <div class="pageContainer04">
+            <div class="kakaoMapBox">
+              <div class="mo_ver addressBox">
+                <p>오시는 길</p>
+                <div>
+                  <span>ADDRESS</span>
+                  <p>서울 강남구 강남대로 526, 2층 그램한의원</p>
+                </div>
+              </div>
+              <div
+                id="daumRoughmapContainer1761663390002"
+                class="root_daum_roughmap root_daum_roughmap_landing"
+              ></div>
+            </div>
+            <div class="callcenter">
+              <img src="./assets/images/main/ico_phone.png" alt="" />
+              <p class="calltitle">대표 상담 전화</p>
+              <a href="tel:02-516-0912">02-516-0912</a>
+              <img src="./assets/images/main/ico_clock.png" alt="" />
+              <p class="calltitle">진료 시간</p>
+              <div class="workdate">
+                <div class="timerow">
+                  <div class="yoil">
+                    <span>월</span>
+                    <span>화</span>
+                    <span>금</span>
+                  </div>
+                  <p class="time">AM10:30~PM8:00</p>
+                </div>
+                <div class="timerow">
+                  <div class="yoil">
+                    <span>수</span>
+                  </div>
+                  <p class="time">PM02:00~PM9:00</p>
+                </div>
+                <div class="timerow">
+                  <div class="yoil">
+                    <span>목</span>
+                  </div>
+                  <p class="time">AM10:30~PM9:00</p>
+                </div>
+                <div class="timerow">
+                  <div class="yoil">
+                    <span>토</span>
+                  </div>
+                  <p class="time">AM10:00~PM4:00</p>
+                </div>
+                <p class="workdate_notify">
+                  <span
+                    >※ 점심시간 PM 01 : 00 ~ 02 : 00 (수, 토요일은 제외)</span
+                  >
+                  <span>※ 일요일, 공휴일 휴진입니다.</span>
+                </p>
+              </div>
+            </div>
+            <div class="ctaForm">
+              <form action="#" method="post">
+                <h2 class="ctatitle">쉽고 빠른 상담신청</h2>
+
+                <div class="formBox">
+                  <div>
+                    <label for="customer_name">이름</label>
+                    <input type="text" id="customer_name" />
+                  </div>
+                  <div>
+                    <label for="customer_phone">연락처</label>
+                    <input
+                      type="text"
+                      id="customer_phone"
+                      class="datetimeOnly"
+                    />
+                  </div>
+                  <div>
+                    <label>진료여부</label>
+                    <div class="radioGroup">
+                      <input
+                        type="radio"
+                        name="isFirstVisit"
+                        value="yes"
+                        id="isFirstVisit01"
+                      />
+                      <label for="isFirstVisit01">초진</label>
+                      <input
+                        type="radio"
+                        name="isFirstVisit"
+                        value="no"
+                        id="isFirstVisit02"
+                      />
+                      <label for="isFirstVisit02">재진</label>
+                    </div>
+                  </div>
+                  <div>
+                    <label>관심부위</label>
+                    <select>
+                      <option value="">관심부위</option>
+                    </select>
+                  </div>
+
+                  <button class="submitBtn">상담하기</button>
+                  <div class="main_terms">
+                    <div>
+                      <input type="checkbox" id="termsAgree" />
+                      <label for="termsAgree">개인정보취급방침 동의</label>
+                    </div>
+                    <a href="#" class="viewTerms">내용보기</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- hospitalInfo [E] -->
+      </main>
+
+      <footer>
+        <h2 class="footer_logo">
+          <img
+            src="./assets/images/main/main_logo_white_md.png"
+            alt="그램한의원"
+          />
+        </h2>
+        <ul class="footer_link01">
+          <li><a href="#">개인정보취급방침</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">미성년자동의서 다운로드</a></li>
+        </ul>
+        <ul class="footer_infolist">
+          <li>06114) 서울 강남구 강남대로 526 2층</li>
+          <li><i>· </i>대표원장 : 이영채</li>
+          <li><i>· </i>사업자등록번호 : 861-14-02642</li>
+          <li><i>· </i>대표전화 : 02-516-0912</li>
+        </ul>
+        <ul class="sns_list">
+          <li>
+            <a href="#"
+              ><img src="./assets/images/main/ico_sns_kakao.png" alt="카카오"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="./assets/images/main/ico_sns_insta.png"
+                alt="인스타그램"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="./assets/images/main/ico_sns_naverblog.png"
+                alt="네이버블로그"
+            /></a>
+          </li>
+        </ul>
+        <p class="copyright">
+          COPYRIGHT 2025 GRAM CLINIC. ALL RIGHTS RESERVED. MADE BY DPWORKS
+        </p>
+        <a href="#" class="fee_link">비급여수가표</a>
+      </footer>
+    </div>
+  </body>
+</html>
