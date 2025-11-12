@@ -1274,6 +1274,7 @@ header + main {
     font-size: 60px;
     font-weight: 300;
     margin-bottom: 40px;
+    word-break: keep-all;
 }
 
 .sub_banner .sub_banner_txt .txt2 strong {
@@ -3517,7 +3518,383 @@ footer .fee_link {
     color: #fff;
 }
 
-.common_paging > li.active a {
+/* 그램환 */
+.gramMedicine {
+    text-align: center;
+}
+
+.gramSubCon {
+    padding: 150px 0;
+}
+
+.rightSideInner {
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: 70px;
+}
+
+.subCon_title {
+    /* text-align: center; */
+    /* display: flex; */
+}
+
+.subCon_title_sml {
+    color: #5d5d5d;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 17px;
+    font-weight: 300;
+}
+
+.subCon_title_sml strong {
+    font-weight: 700;
+}
+
+.subCon_mainTitle {
+    color: #151515;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 32px;
+    display: block;
+}
+
+.subCon_mainTitle.white {
+    color: #fff;
+}
+
+.subCon_mainTitle strong {
+    color: #cb8ebd;
+}
+
+.subCon_subTitle {
+    color: #151515;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.subCon_subTitle strong {
+    font-weight: 700;
+}
+
+.subCon_title.leftSide {
+    text-align: center;
+    /* margin-left: 50px; */
+    max-width: 800px;
+}
+
+.subCon_title.rightSide {
+    text-align: center;
+    /* display: flex; */
+    max-width: 800px;
+    /* margin-left: auto; */
+    /* flex-direction: column; */
+}
+
+.subCon_title.gray .subCon_title_sml {
+}
+
+.medicineBox {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    gap: 38px;
+}
+
+.medicineBox .left {
+}
+
+.medicineBox .right {
+}
+
+.medicineBox img {
+    margin-bottom: 50px;
+    width: 100%;
+    display: block;
+}
+
+.medicineBox > div > div {width: calc(100% - 40px);margin: 0 auto;}
+
+.medicineBox > div > div p {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.medicineBox > div > div span {
+    font-size: 18px;
+    position: relative;
+    display: block;
+    padding-top: 16px;
+    word-break: keep-all;
+}
+
+.medicineBox > div > div span:before {
+    content: "";
+    height: 1px;
+    width: 150px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #a0a0a0;
+}
+
+.medicineBox > div > div span strong {
+    font-weight: 700;
+}
+
+.medicineBasic {
+    background: url('../images/sub/sub09_content03.jpg') center;
+    background-size: cover;
+    /* width: 100%; */
+    padding-left: 50px;
+}
+
+.medicineInfo {
+}
+
+.subCon_paragraph {
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+.subCon_paragraph strong {
+    font-weight: 700;
+}
+
+.effectDiv {
+    margin-bottom: 30px;
+}
+
+.effectDivTag {
+    display: inline-block;
+    color: #bfb3a2;
+    background: #151515;
+    border-radius: 17px;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    padding: 2px 17px;
+}
+
+.medicinePremium .effectDivTag {
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.effectDivLists {
+}
+
+.effectDivLists li {
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+}
+
+.effectDivLists li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url('../images/sub/sub09_checker_dark.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.mainEffectBox {
+}
+
+.mainEffectBox li {
+    display: inline-flex;
+    width: 160px;
+    height: 75px;
+    border-radius: 37px;
+    background: rgba(255,255,255, 0.14);
+    justify-content: center;
+    line-height: 75px;
+    border: 1px solid #151515;
+    margin-right: -24px;
+    align-items: center;
+    margin-bottom: 5px;
+    gap: 20px;
+}
+
+.mainEffectBox li.pink {
+    border: 1px solid #b5639e;
+}
+
+.mainEffectBox li span {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.medicinePremium {
+    background: url(../images/sub/sub09_content04.jpg) center;
+    background-size: cover;
+    /* width: 100%; */
+    padding-left: 50px;
+}
+
+.effectDivRow {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.effectDivSub {
+    color: #7d7d7d;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.materialInfo {
+}
+
+.materialInfo img {
+}
+
+.medicineGraph {
+    background: #574b49;
+    text-align: center;
+}
+
+.medicineGraph .subCon_title_sml {
+    color: #c3b3af;
+}
+
+.medicineGraph .subCon_title_sml strong {
+    color: #cb8ebd;
+}
+
+.medicineGraph .subCon_title {
+}
+
+.medicineGraph .subCon_title {
+}
+
+.medicineGraph img {
+    margin-top: 40px;
+    width: calc(100% - 100px);
+    display: block;
+    margin: 40px auto 0;
+    max-width: fit-content;
+}
+
+.medicineGraph .subCon_subTitle {
+    color: #c2b2ae;
+}
+
+.medicineGraph .graph_txt {
+    margin-top: 32px;
+    color: #c2b2ae;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.medicinePackage {
+    background: #fafafa;
+    text-align: center;
+}
+
+.medicinePackage .subCon_title_sml strong {
+    color: #5c5c5c;
+}
+
+.medicinePackage img {
+    width: 100%;
+    display: block;
+    margin: 30px auto 0;
+    width: calc(100% - 100px);
+}
+
+.packageGuide {
+    border: 3px solid #2d2d2d;
+    background: #fff;
+    padding: 68px 0 90px;
+}
+
+.packageGuide > span {
+    color: #bababa;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.packageGuide > p {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.packageGuide > p strong {
+    color: #d589c4;
+}
+
+.packageGuide ul {
+    display: inline-block;
+    text-align: left;
+}
+
+.packageGuide ul li {
+    font-weight: 400;
+    font-size: 22px;
+    padding-bottom: 12px;
+    position: relative;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #dfdfdf;
+    padding-left: 40px;
+}
+
+.packageGuide ul li:before {
+    content: "";
+    background-color: #d589c4;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    left: 14px;
+    top: 12px;
+    /* transform: translateY(-50%); */
+}
+
+.packageLink {
+    margin-top: 33px;
+    display: block;
+    border-radius: 60px;
+    background: #2d2d2d;
+    color: #fff;
+    height: 120px;
+}
+
+.packageLink span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    height: 100%;
+    font-weight: 300;
+    flex-wrap: wrap;
+}
+
+.packageLink span strong {
+    font-weight: 700;
+    color: #d589c4;
+}
+
+.packageLink span img {
+    width: auto;
+    /* margin-left: 20px; */
+    margin: 0;
+    /* display: block; */
+    transform: translateX(20px);
 }
 
 @media (max-width: 1700px) {
@@ -3766,14 +4143,102 @@ footer .fee_link {
 
 /* m1 */
 @media (max-width: 1024px) {
-  .recommendImg  {max-width: 741px;width: 100%; padding-bottom: 100px;}
-  .recommend_lists li span {top:25px}
-  .recommend_lists li {font-size: 18px;background-size: 20px;padding-left: 76px;height: auto;flex-wrap: wrap;align-items: flex-start;background-position-y: 15px;padding-top: 11px;padding-bottom: 27px;}
-  .recommend_target .graduation_numbering .numberingMent {padding-top: 100px;}
-  .special_graduation_package {padding-bottom: 100px;}
-  .compareImg > img {max-width: 753px;}
-  .graduation_numbering .numberingMent .ment4 {font-size: 16px;}
-  .special_graduation_package .numberingMent {padding-top: 60px;}
+    .packageLink {height: 70px;}
+    .packageLink span {margin-top: 60px;font-size: 25px;margin-bottom: 80px;}
+    .packageGuide > span {font-size: 18px;}
+    .packageGuide ul li {font-size: 18px;padding-right: 20px;word-break: keep-all;}
+    .packageGuide > p {font-size: 30px;}
+    .packageGuide {padding: 35px 0 43px;}
+    .medicineGraph img,
+    .medicinePackage img {width: calc(100% - 50px);}
+    .effectDivSub {color: #151515;}
+    .rightSideInner  {margin: 0;}
+    .subCon_paragraph {font-size: 20px;margin-bottom: 30px;}
+    .subCon_title {max-width: 100% !important;}
+    .medicineBox > div > div p {font-size: 22px;}
+    .medicineBox > div > div span {font-size: 16px;}
+    .medicineBox {
+        gap: 0px;
+    }
+
+    .medicineBox .left {
+        margin-right: -20px;
+    }
+
+    .medicineBox .right {
+        margin-left: -20px;
+    }
+
+    .subCon_title_sml {
+        font-size: 16px;
+    }
+
+    .subCon_mainTitle {
+        font-size: 40px;
+    }
+
+    .subCon_subTitle {
+        font-size: 18px;
+    }
+
+    .gramSubCon {
+        padding: 120px 0;
+    }
+
+    .medicineBasic {
+        background: url('../images/sub/mo_sub09_content03.jpg') right bottom no-repeat;
+        background-size: cover;
+        padding-bottom: 200px;
+    }
+
+    .medicinePremium {
+        background: url('../images/sub/mo_sub09_content04.jpg') center no-repeat;
+        background-size: cover;
+        padding-bottom: 200px !important;
+    }
+
+    .recommendImg {
+        max-width: 741px;
+        width: 100%;
+        padding-bottom: 100px;
+    }
+
+    .recommend_lists li span {
+        top: 25px
+    }
+
+    .recommend_lists li {
+        font-size: 18px;
+        background-size: 20px;
+        padding-left: 76px;
+        height: auto;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        background-position-y: 15px;
+        padding-top: 11px;
+        padding-bottom: 27px;
+    }
+
+    .recommend_target .graduation_numbering .numberingMent {
+        padding-top: 100px;
+    }
+
+    .special_graduation_package {
+        padding-bottom: 100px;
+    }
+
+    .compareImg > img {
+        max-width: 753px;
+    }
+
+    .graduation_numbering .numberingMent .ment4 {
+        font-size: 16px;
+    }
+
+    .special_graduation_package .numberingMent {
+        padding-top: 60px;
+    }
+
     .system_txt {
         font-size: 20px;
     }
@@ -4976,8 +5441,14 @@ footer .fee_link {
 }
 
 @media (max-width: 600px) {
-  .recommend_lists li {font-size: 15px;}
-  .system_txt {font-size: 15px;}
+    .recommend_lists li {
+        font-size: 15px;
+    }
+
+    .system_txt {
+        font-size: 15px;
+    }
+
     .sub_graduation04 .ment2 {
         font-size: 23px;
     }
@@ -5209,12 +5680,68 @@ footer .fee_link {
 
 /* m2 */
 @media (max-width: 400px) {
-    .recommendImg  {padding-bottom: 50px;}
-    .recommend_target .graduation_numbering .numberingMent {padding-top: 50px;}
-  .recommend_target .graduation_numbering .numberingMent {padding-top: 60px;}
-  .special_graduation_package {padding-bottom: 58px;}  
-  .graduation_numbering .numberingMent .ment4 {font-size: 13px;}
-  .system_txt {font-size: 13px;}
+    .medicineGraph img, .medicinePackage img {width: 100%;}
+    .packageLink span img {width: 22px;transform: translateX(5px);}
+    .packageLink {height: 60px; margin-top: 16px;}
+    .packageLink span {
+    margin-top: 30px;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+    .packageGuide ul li:before {width: 6px;height: 6px;top: 6px;}
+    .packageGuide ul li {font-size: 14px;padding-left: 28px;}
+    .packageGuide > p {font-size: 20px; margin-bottom: 20px;}
+    .packageGuide > span {font-size: 13px;margin-bottom: 8px;}
+    .packageGuide {padding: 34px 0 45px;}
+    .medicineGraph .graph_txt {font-size: 12px;}
+    .materialInfo {display: flex;}
+    .materialInfo li {gap: 4px;}
+    .materialInfo li:first-child img {width: 26px;}
+    .materialInfo li:nth-child(2) img {width: 15px;}
+    .materialInfo li:nth-child(3) img {width: 18px;}
+    .materialInfo li:nth-child(4) img {width: 24px;}
+    .materialInfo img {width: 30px;}
+    .medicineBasic, .medicinePremium {padding-bottom: 150px !important;}
+    .mainEffectBox li {width: 80px;height: 38px;line-height: normal;margin-right: -12px;}
+    .mainEffectBox li span {font-size: 13px;}
+    .effectDiv {margin-bottom: 15px;}
+    .effectDivLists li {font-size: 15px; margin-bottom: 6px;}
+    .effectDivTag {font-size: 13px;margin-bottom: 10px;}
+    .subCon_paragraph br {display: none;}
+     .subCon_paragraph {font-size: 14px;}
+    .medicineBox > div > div span {padding-top: 8px;font-size: 13px;}
+    .medicineBox > div > div p {font-size: 14px;}
+    .medicineBox img {margin-bottom: 25px;}
+    .subCon_title_sml {font-size: 12px;margin-bottom: 10px;}
+    .subCon_mainTitle {font-size: 24px;margin-bottom: 16px;}
+    .subCon_subTitle {font-size: 13px;}
+
+    .gramSubCon {padding: 60px 0;}
+    .recommendImg {
+        padding-bottom: 50px;
+    }
+
+    .recommend_target .graduation_numbering .numberingMent {
+        padding-top: 50px;
+    }
+
+    .recommend_target .graduation_numbering .numberingMent {
+        padding-top: 60px;
+    }
+    
+
+    .special_graduation_package {
+        padding-bottom: 58px;
+    }
+
+    .graduation_numbering .numberingMent .ment4 {
+        font-size: 13px;
+    }
+
+    .system_txt {
+        font-size: 13px;
+    }
+
     .sub_graduation01 .packagePicto ul li {
         width: 100px;
         font-size: 13px;
@@ -5642,10 +6169,6 @@ footer .fee_link {
         font-size: 13px;
     }
 
-    .bannerTxtBox {
-        /* top: 70px; */
-    }
-
     .bannerTxtBox .txt1 {
         font-size: 30px;
         margin-bottom: 20px;
@@ -5982,4 +6505,3 @@ footer .fee_link {
         font-size: 11px;
     }
 }
-
