@@ -340,7 +340,7 @@
 /* main_middle_content 섹션 */
 .main_middle_content .leftCon,
 .main_middle_content .rightCon {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .main_middle_content .leftCon img,
@@ -350,7 +350,7 @@
 
 .main_middle_content .topContent:hover .leftCon img,
 .main_middle_content .btmContent:hover .rightCon img {
-  transform: scale(1.06);
+  /* transform: scale(1.06); */
 }
 
 .main_middle_content .mentBox {
@@ -383,9 +383,6 @@
   transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.before_and_after .beforeafterSwiper .swiper-slide:hover img {
-  transform: scale(1.05);
-}
 
 .before_and_after .swiper-button-prev,
 .before_and_after .swiper-button-next {
@@ -394,7 +391,6 @@
 
 .before_and_after .swiper-button-prev:hover,
 .before_and_after .swiper-button-next:hover {
-  opacity: 0.8;
   transform: scale(1.1);
 }
 
@@ -483,14 +479,14 @@
 
 .scroll-fade-right {
   opacity: 0;
-  transform: translateX(50px);
+  transform: translateX(-50px);
   transition: opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94),
               transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .scroll-fade-right.active {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateX(0px);
 }
 
 /* 메인페이지 반응형 */
