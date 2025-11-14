@@ -51,7 +51,7 @@ body:has(.moGnbMenu.active), html:has(.moGnbMenu.active) {
     max-width: 1500px;
     width: 100%;
     margin: 0px auto;
-    padding: 0 20px;
+    padding: 0px 20px;
 }
 
 .subContainer02 {
@@ -423,14 +423,14 @@ header + main {
     height: 100%;
     object-fit: cover;
     z-index: 0;
-    background: #000;
+    background: rgb(0, 0, 0);
     filter: brightness(0.7);
 }
 
 .main_banner_video .video_shadow_filter {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: 0px;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
@@ -450,7 +450,6 @@ header + main {
     z-index: 999;
     left: 50%;
     bottom: 158px;
-    transform: translateX(-50%) !important;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -458,7 +457,8 @@ header + main {
     width: 100%;
     margin: 0px auto;
     padding: 0px 20px;
-    text-shadow: 0 0 3px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.6);
+    text-shadow: rgba(0, 0, 0, 0.8) 0px 0px 3px, rgba(0, 0, 0, 0.6) 0px 0px 5px;
+    transform: translateX(-50%) !important;
 }
 
 .main_banner_video .banner_tit {
@@ -578,17 +578,17 @@ header + main {
 
 .main_middle_content .btmContent .leftCon {
     padding-top: 260px;
-    /* flex: 1 1 0%; */
-    /* width: calc(100% - 21px); */
     min-width: fit-content;
-    /* display: block; */
-    /* display: block; */
-    /* display: flex; */
 }
 
-.main_middle_content .rightCon {flex: 1;}
-.rightImg {    margin-top: 60px;
-    margin-left: -70px;}
+.main_middle_content .rightCon {
+    flex: 1 1 0%;
+}
+
+.rightImg {
+    margin-top: 60px;
+    margin-left: -70px;
+}
 
 .main_middle_content .emptyBox {
     width: 616px;
@@ -752,11 +752,11 @@ header + main {
 .main_speciality .panel li a strong {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%) !important;
     bottom: 185px;
     color: rgb(255, 255, 255);
     font-size: 40px;
     width: 100%;
+    transform: translateX(-50%) !important;
 }
 
 .main_speciality .panel li a strong::after {
@@ -773,13 +773,13 @@ header + main {
 .main_speciality .panel li a p {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%) !important;
     bottom: 74px;
     color: rgb(255, 255, 255);
     width: 100%;
     font-size: 25px;
     line-height: 1.2;
     white-space: nowrap;
+    transform: translateX(-50%) !important;
 }
 
 .main_event_swiperbox {
@@ -1314,7 +1314,6 @@ header + main {
     width: 100%;
     left: 50%;
     max-width: 1240px;
-    transform: translateX(-50%) !important;
     padding: 0px 20px;
     height: 100%;
     align-items: flex-end;
@@ -1322,6 +1321,7 @@ header + main {
     justify-content: center;
     color: rgb(255, 255, 255);
     flex-direction: column;
+    transform: translateX(-50%) !important;
 }
 
 .bannerTxtBox .txt1 {
@@ -1396,7 +1396,7 @@ header + main {
     height: 100%;
     display: block;
     object-fit: cover;
-    object-position: bottom;
+    object-position: center bottom;
 }
 
 .sub_graduation01 .packageBox {
@@ -1731,7 +1731,10 @@ header + main {
     position: relative;
     padding: 100px 92px;
 }
-.system_txt + .system_lists_capture {margin-top: 50px;}
+
+.system_txt + .system_lists_capture {
+    margin-top: 50px;
+}
 
 .system_lists_capture::before {
     content: "";
@@ -1768,7 +1771,7 @@ header + main {
     font-weight: 300;
     line-height: 1.4;
     font-size: 24px;
-    margin-top: 0;
+    margin-top: 0px;
     word-break: keep-all;
 }
 
@@ -1822,7 +1825,7 @@ header + main {
 .recommend_lists {
     padding-bottom: 150px;
     max-width: 880px;
-    margin: 0 auto;
+    margin: 0px auto;
 }
 
 .recommend_lists li {
@@ -1867,7 +1870,7 @@ header + main {
 }
 
 .sub_spirit .spirit01 {
-    background: #e9e3e3;
+    background: rgb(233, 227, 227);
 }
 
 .sub_spirit .spirit01::after {
@@ -2013,8 +2016,7 @@ header + main {
 
 .sub_gram_special .special_content03 {
     padding: 150px 0px 138px;
-    background: #f6f7f8;
-    /* color: rgb(255, 255, 255); */
+    background: rgb(246, 247, 248);
 }
 
 .sub_gram_special .special_content_txt {
@@ -2378,7 +2380,6 @@ footer .fee_link {
     font-size: 14px;
 }
 
-/* 오시는 길 */
 .hospital_map_info {
     margin-top: 200px;
     font-family: Pretendard, sans-serif;
@@ -2390,7 +2391,7 @@ footer .fee_link {
 }
 
 .map_info_inner .left {
-    flex: 1;
+    flex: 1 1 0%;
 }
 
 .map_info_inner .inforow {
@@ -2404,7 +2405,7 @@ footer .fee_link {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #21283c;
+    color: rgb(33, 40, 60);
     font-weight: 700;
     font-size: 18px;
     min-width: 100px;
@@ -2422,7 +2423,7 @@ footer .fee_link {
 }
 
 .map_info_inner .inforow_con > span {
-    color: #21283c;
+    color: rgb(33, 40, 60);
     font-size: 18px;
     font-weight: 300;
 }
@@ -2434,7 +2435,7 @@ footer .fee_link {
 }
 
 .map_info_inner .inforow_con .timeline > span {
-    color: #21283c;
+    color: rgb(33, 40, 60);
     font-size: 18px;
     font-weight: 300;
     width: 80px;
@@ -2451,7 +2452,7 @@ footer .fee_link {
 }
 
 .map_info_inner .inforow_con .subinfo {
-    color: #aaaaaa;
+    color: rgb(170, 170, 170);
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 24px;
@@ -2468,7 +2469,7 @@ footer .fee_link {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-size: 18px;
     font-weight: 700;
     gap: 14px;
@@ -2479,15 +2480,15 @@ footer .fee_link {
 }
 
 .sns_call_box a.kakao_box {
-    background: #2e2525;
+    background: rgb(46, 37, 37);
 }
 
 .sns_call_box a.tmap_box {
-    background: #4ca4eb;
+    background: rgb(76, 164, 235);
 }
 
 .map_info_inner .right {
-    flex: 1;
+    flex: 1 1 0%;
 }
 
 .map_info_inner .right .kakaoMapBox {
@@ -2506,20 +2507,20 @@ footer .fee_link {
 }
 
 .map_info_inner .right .subwayinfo {
-    border: 1px solid #e4e4e4;
+    border: 1px solid rgb(228, 228, 228);
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60px !important;
-    color: #21283c;
+    color: rgb(33, 40, 60);
     font-weight: 700;
     gap: 4px;
     font-size: 18px;
+    height: 60px !important;
 }
 
 .map_info_inner .right .subwayinfo .line7 {
-    color: #697215;
-    border: 3px solid #697215;
+    color: rgb(105, 114, 21);
+    border: 3px solid rgb(105, 114, 21);
     border-radius: 20px;
     width: 80px;
     height: 40px;
@@ -2530,8 +2531,8 @@ footer .fee_link {
 }
 
 .map_info_inner .right .subwayinfo .linenewbundang {
-    color: #b5283b;
-    border: 3px solid #b5283b;
+    color: rgb(181, 40, 59);
+    border: 3px solid rgb(181, 40, 59);
     border-radius: 20px;
     width: 80px;
     height: 40px;
@@ -2552,14 +2553,14 @@ footer .fee_link {
 
 .parking_info h3 {
     margin-bottom: 28px;
-    color: #222222;
+    color: rgb(34, 34, 34);
     font-size: 50px;
     font-weight: 700;
     line-height: 1;
 }
 
 .parking_info .subTitle {
-    color: #222;
+    color: rgb(34, 34, 34);
     font-size: 18px;
     font-weight: 300;
     margin-bottom: 45px;
@@ -2570,7 +2571,6 @@ footer .fee_link {
     display: block;
 }
 
-/* 다이어트 졸업 */
 .doctorIntroduce {
     margin-top: 120px;
     margin-bottom: 200px;
@@ -2579,32 +2579,35 @@ footer .fee_link {
 .doctorIntroduce .top {
     text-align: center;
     position: relative;
-    /* padding: 0 240px; */
     max-width: 720px;
-    margin: 0 auto 108px;
-    padding: 5px 0 60px;
+    margin: 0px auto 108px;
+    padding: 5px 0px 60px;
 }
 
 .doctorIntroduce .leftTopBorder {
     position: absolute;
-    border: 2px solid #574c4a;
+    border-top: 2px solid rgb(87, 76, 74);
+    border-left: 2px solid rgb(87, 76, 74);
+    border-image: initial;
     width: 37px;
     height: 60px;
     border-right: none;
-    left: 0;
+    left: 0px;
     border-bottom: none;
-    top: 0;
+    top: 0px;
 }
 
 .doctorIntroduce .rightBtmBorder {
     position: absolute;
-    border: 2px solid #574c4a;
+    border-right: 2px solid rgb(87, 76, 74);
+    border-bottom: 2px solid rgb(87, 76, 74);
+    border-image: initial;
     width: 37px;
     height: 60px;
     border-left: none;
-    right: 0;
+    right: 0px;
     border-top: none;
-    bottom: 0;
+    bottom: 0px;
 }
 
 .doctorIntroduce .top img {
@@ -2619,8 +2622,6 @@ footer .fee_link {
 
 .doctorIntroduce .btm {
     display: flex;
-    /* align-items: center; */
-    /* justify-content: space-between; */
     gap: 70px;
     padding-left: 100px;
 }
@@ -2639,7 +2640,7 @@ footer .fee_link {
 }
 
 .doctorIntroduce .careerTit {
-    color: #cb8ebd;
+    color: rgb(203, 142, 189);
     font-size: 22px;
     margin-bottom: 16px;
     font-weight: 700;
@@ -2655,19 +2656,15 @@ footer .fee_link {
     line-height: 1.6;
 }
 
-/* Gallery Section */
 .gallery_section {
-    padding: 160px 0 200px;
-    background: #fff;
+    padding: 160px 0px 200px;
+    background: rgb(255, 255, 255);
 }
 
-/* 메인 이미지 영역 */
 .gallery_main {
-    margin-bottom: 80px;
-    /* border-radius: 12px; */
     overflow: hidden;
     max-width: 1200px;
-    margin: 0 auto 80px;
+    margin: 0px auto 80px;
 }
 
 .galleryMain {
@@ -2679,7 +2676,7 @@ footer .fee_link {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f8f8f8;
+    background: rgb(248, 248, 248);
 }
 
 .galleryMain .swiper-slide img {
@@ -2688,11 +2685,10 @@ footer .fee_link {
     object-fit: contain;
 }
 
-/* 썸네일 영역 */
 .gallery_thumbs {
     position: relative;
-    padding: 0;
-    margin: 0 auto;
+    padding: 0px;
+    margin: 0px auto;
 }
 
 .galleryThumbs {
@@ -2703,19 +2699,16 @@ footer .fee_link {
 
 .galleryThumbs .swiper-slide {
     cursor: pointer;
-    /* opacity: 0.6; */
     transition: opacity 0.3s;
-    /* border-radius: 8px; */
     overflow: hidden;
 }
 
 .galleryThumbs .swiper-slide:hover {
-    /* opacity: 0.8; */
 }
 
 .galleryThumbs .swiper-slide-thumb-active {
     opacity: 1;
-    border: 5px solid #cb8ebd;
+    border: 5px solid rgb(203, 142, 189);
     box-sizing: border-box;
 }
 
@@ -2726,7 +2719,6 @@ footer .fee_link {
     display: block;
 }
 
-/* Swiper 버튼 커스텀 */
 .gallery_section .swiper-button-prev, .gallery_section .swiper-button-next {
     width: 16px;
     top: 50%;
@@ -2736,43 +2728,42 @@ footer .fee_link {
 }
 
 .gallery_section .swiper-button-prev {
-    left: 0;
+    left: 0px;
 }
 
 .gallery_section .swiper-button-next {
-    right: 0;
-    background: url(../images/sub/ico_arrow_right.png) no-repeat;
+    right: 0px;
+    background: url("../images/sub/ico_arrow_right.png") no-repeat;
 }
 
-.gallery_section .swiper-button-prev:after, .gallery_section .swiper-button-next:after {
+.gallery_section .swiper-button-prev::after, .gallery_section .swiper-button-next::after {
     font-size: 18px;
-    color: #333;
+    color: rgb(51, 51, 51);
     font-weight: bold;
     display: none;
 }
 
-/* 온라인예약 */
 .form_wrapper {
     font-family: Pretendard, sans-serif;
     margin-top: 112px;
-    color: #21283c;
+    color: rgb(33, 40, 60);
 }
 
 .form_wrapper .center-container {
-    padding: 0 20px;
+    padding: 0px 20px;
 }
 
 .form_wrapper .noti_box {
-    background: #f4f4f4;
+    background: rgb(244, 244, 244);
     display: flex;
-    padding: 30px 0 30px 60px;
+    padding: 30px 0px 30px 60px;
     margin-bottom: 60px;
 }
 
 .form_wrapper .noti_box .title {
     font-size: 30px;
     line-height: 1;
-    color: #21283c;
+    color: rgb(33, 40, 60);
     margin-right: 155px;
     font-weight: 600;
 }
@@ -2780,7 +2771,7 @@ footer .fee_link {
 .form_wrapper .noti_box .noti_lists li {
     font-size: 18px;
     line-height: 1.7;
-    color: #21283c;
+    color: rgb(33, 40, 60);
 }
 
 .form_wrapper .noti_box .noti_lists li.emphasis {
@@ -2788,8 +2779,8 @@ footer .fee_link {
 }
 
 .form_wrapper .grey_btn {
-    background: #999;
-    color: #fff;
+    background: rgb(153, 153, 153);
+    color: rgb(255, 255, 255);
     border-radius: 5px;
     font-size: 16px;
     width: 95px;
@@ -2803,20 +2794,20 @@ footer .fee_link {
     justify-content: space-between;
 }
 
-.form_wrapper form .step:after {
+.form_wrapper form .step::after {
     content: "";
     position: absolute;
     width: 2px;
     height: 100%;
-    background: #cb8ebd;
+    background: rgb(203, 142, 189);
     z-index: -1;
     left: 24px;
     transition: 0.4s;
 }
 
-.form_wrapper form .step_03:after {
-    width: 0;
-    height: 0;
+.form_wrapper form .step_03::after {
+    width: 0px;
+    height: 0px;
 }
 
 .form_wrapper form .step .numbering {
@@ -2827,25 +2818,25 @@ footer .fee_link {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 2px solid #cb8ebd;
+    border: 2px solid rgb(203, 142, 189);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 16px;
-    color: #cb8ebd;
-    background: #fff;
+    color: rgb(203, 142, 189);
+    background: rgb(255, 255, 255);
     margin-right: 20px;
     transition: 0.4s;
 }
 
 .form_wrapper form .step:hover .circle {
-    border: 2px solid #cb8ebd;
-    background-color: #cb8ebd;
-    color: #fff;
+    border: 2px solid rgb(203, 142, 189);
+    background-color: rgb(203, 142, 189);
+    color: rgb(255, 255, 255);
 }
 
-.form_wrapper form .step:hover:after {
-    background: #cb8ebd;
+.form_wrapper form .step:hover::after {
+    background: rgb(203, 142, 189);
 }
 
 .form_wrapper form .step .numbering .text {
@@ -2855,7 +2846,7 @@ footer .fee_link {
 
 .form_wrapper form .step .input_box_wrapper {
     width: 900px;
-    background: #f4f4f4;
+    background: rgb(244, 244, 244);
     padding: 30px;
     display: flex;
     justify-content: space-between;
@@ -2877,35 +2868,34 @@ footer .fee_link {
     font-size: 16px;
     margin-bottom: 10px;
     align-items: center;
-    /* font-weight: 600; */
 }
 
 .form_wrapper form .step .input_box_wrapper .input_box label.required_field {
     position: relative;
 }
 
-.form_wrapper form .step .input_box_wrapper .input_box label.required_field:after {
+.form_wrapper form .step .input_box_wrapper .input_box label.required_field::after {
     content: "*";
-    color: #eb741d;
+    color: rgb(235, 116, 29);
     margin-left: 3px;
 }
 
 .form_wrapper form .step .input_box_wrapper .input_box .common_input {
-    border: 1px solid #fff;
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 5px;
     height: 46px;
     padding: 10px;
     width: 100%;
-    outline: 0;
+    outline: 0px;
     font-size: 16px;
 }
 
 .form_wrapper form .step .input_box_wrapper .input_box .common_input:focus {
-    border: 1px solid #cb8ebd;
+    border: 1px solid rgb(203, 142, 189);
 }
 
 .form_wrapper form .step .input_box_wrapper .input_box .common_input::placeholder {
-    color: #cfcfcf;
+    color: rgb(207, 207, 207);
     font-size: 16px;
 }
 
@@ -2934,9 +2924,8 @@ footer .fee_link {
 .form_wrapper .check_wrapper .check_item input + label {
     transition: background-color 0.4s, color 0.4s;
     height: 46px;
-    border-radius: 5px;
-    background: #fff;
-    margin-bottom: 0;
+    background: rgb(255, 255, 255);
+    margin-bottom: 0px;
     border-radius: 5px;
     cursor: pointer;
     line-height: 46px;
@@ -2944,13 +2933,13 @@ footer .fee_link {
 }
 
 .form_wrapper .check_wrapper .check_item input:checked + label {
-    background: #cb8ebd;
-    color: #fff;
+    background: rgb(203, 142, 189);
+    color: rgb(255, 255, 255);
 }
 
 .form_wrapper .step_02 .check_wrapper .check_item .show_ico_check_box + label {
     text-align: left;
-    padding: 0 15px;
+    padding: 0px 15px;
 }
 
 .form_wrapper .step_02 .check_wrapper .check_item .show_ico_check_box:checked + label {
@@ -2961,9 +2950,9 @@ footer .fee_link {
 
 .form_wrapper .step_02 .select_doctor_wrap {
     flex-direction: column;
-    width: 410px !important;
     flex-shrink: 0;
     margin-left: 26px;
+    width: 410px !important;
     justify-content: flex-start !important;
 }
 
@@ -2972,20 +2961,20 @@ footer .fee_link {
 }
 
 .form_wrapper .step_02 .select_doctor_wrap .select_doctor_box_wrapper .select_doctor_box {
-    border: 1px solid #cb8ebd;
+    border: 1px solid rgb(203, 142, 189);
     border-radius: 5px;
-    background: #fff;
+    background: rgb(255, 255, 255);
     display: flex;
     justify-content: space-between;
     height: 46px;
-    padding: 0 10px;
+    padding: 0px 10px;
     align-items: center;
     position: relative;
     z-index: 20;
 }
 
 .form_wrapper .step_02 .select_doctor_wrap .select_doctor_box_wrapper .select_doctor_box .name {
-    color: #666;
+    color: rgb(102, 102, 102);
     font-size: 16px;
 }
 
@@ -2994,11 +2983,10 @@ footer .fee_link {
 }
 
 .form_wrapper .step_02 .select_doctor_wrap .select_doctor_box_wrapper .select_lists {
-    background: #fff;
-    border-radius: 0 0 5px 5px;
-    padding: 10px;
+    background: rgb(255, 255, 255);
+    border-radius: 0px 0px 5px 5px;
+    padding: 12px 10px 10px;
     font-size: 16px;
-    padding-top: 12px;
     transform: translateY(-5px);
     z-index: 10;
     position: absolute;
@@ -3012,7 +3000,7 @@ footer .fee_link {
 }
 
 .doctor {
-    background: #fff;
+    background: rgb(255, 255, 255);
     border-radius: 5px;
     display: flex;
     padding-top: 18px;
@@ -3023,7 +3011,6 @@ footer .fee_link {
 }
 
 .doctor img {
-    /* margin-right: 35px; */
 }
 
 .doctor .doctor_info .doc_name {
@@ -3039,7 +3026,7 @@ footer .fee_link {
 
 .doctor .doctor_info .expert .tit {
     font-size: 14px;
-    color: #cb8ebd;
+    color: rgb(203, 142, 189);
     font-weight: bold;
     margin-right: 16px;
     word-break: keep-all;
@@ -3047,7 +3034,7 @@ footer .fee_link {
 
 .doctor .doctor_info .expert .cont {
     word-break: initial;
-    color: #666;
+    color: rgb(102, 102, 102);
     font-size: 14px;
     font-weight: bold;
 }
@@ -3065,13 +3052,10 @@ footer .fee_link {
 }
 
 .call_consult_check_wrap {
-    background: #fff;
+    background: rgb(255, 255, 255);
     border-radius: 5px;
-    display: flex;
-    /* height: 46px; */
     margin-top: 24px;
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
     cursor: pointer;
@@ -3082,17 +3066,17 @@ footer .fee_link {
 .selected_doctor .call_consult_check_wrap {
     width: 100%;
     height: 100%;
-    margin: 0;
+    margin: 0px;
 }
 
 .call_consult_check_wrap .tit {
     font-size: 17px;
-    color: #21283c;
+    color: rgb(33, 40, 60);
     text-align: center;
 }
 
 .call_consult_check_wrap .tit span {
-    color: #999;
+    color: rgb(153, 153, 153);
     font-size: 14px;
     vertical-align: bottom;
     display: block;
@@ -3104,24 +3088,23 @@ footer .fee_link {
 .call_consult_check_wrap #isCallConsult + label {
     width: 65px;
     text-align: center;
-    margin: 0;
+    margin: 5px 0px 0px;
     cursor: pointer;
     transition: 0.4s;
-    margin-top: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .call_consult_check_wrap #isCallConsult:checked + label {
-    background: #21283c;
+    background: rgb(33, 40, 60);
 }
 
 .selected_doctor .doctor {
-    margin-top: 0 !important;
     display: flex;
     height: 100%;
-    border: 1px solid #21283c;
+    border: 1px solid rgb(33, 40, 60);
+    margin-top: 0px !important;
 }
 
 .check_wrapper.one .check_item {
@@ -3140,7 +3123,6 @@ footer .fee_link {
 }
 
 .check_wrapper.four {
-    padding: 0 -10px;
 }
 
 .form_wrapper form .step_03 .input_box_wrapper .input_box {
@@ -3151,9 +3133,8 @@ footer .fee_link {
 .form_wrapper .step_03 .selected_doctor {
     width: 100%;
     height: 172px;
-    /* border: 1px solid #cb8ebd; */
     border-radius: 5px;
-    background: #fff;
+    background: rgb(255, 255, 255);
     margin-bottom: 30px;
 }
 
@@ -3166,9 +3147,8 @@ footer .fee_link {
 .form_wrapper .step_03 .time_select_box .check_item label {
     transition: background-color 0.4s, color 0.4s;
     height: 46px;
-    border-radius: 5px;
-    background: #fff;
-    margin-bottom: 0;
+    background: rgb(255, 255, 255);
+    margin-bottom: 0px;
     border-radius: 5px;
     cursor: pointer;
     line-height: 46px;
@@ -3176,19 +3156,18 @@ footer .fee_link {
 }
 
 .form_wrapper .step_03 .time_select_box .check_item {
-    width: calc((100% - 30px) / 4);
+    width: calc(25% - 7.5px);
     max-width: 95px;
-    /* margin-right: 10px; */
 }
 
 .form_wrapper input[disabled] + label {
-    background: #e8e8e8 !important;
-    color: #666;
+    color: rgb(102, 102, 102);
+    background: rgb(232, 232, 232) !important;
     cursor: not-allowed !important;
 }
 
 .form_wrapper .agree_box {
-    border: 1px solid #e4e4e4;
+    border: 1px solid rgb(228, 228, 228);
     padding: 35px 108px 50px 66px;
     display: flex;
 }
@@ -3202,14 +3181,14 @@ footer .fee_link {
     word-break: keep-all;
 }
 
-.form_wrapper .agree_box .tit:after {
+.form_wrapper .agree_box .tit::after {
     content: "*";
-    color: #eb741d;
+    color: rgb(235, 116, 29);
     margin-left: 3px;
 }
 
 .form_wrapper .agree_box .cont {
-    color: #000;
+    color: rgb(0, 0, 0);
     font-size: 14px;
     line-height: 1.5;
     word-break: keep-all;
@@ -3217,7 +3196,7 @@ footer .fee_link {
 
 .form_wrapper .form_dtn_wrap {
     text-align: center;
-    margin: 80px 0 130px;
+    margin: 80px 0px 130px;
 }
 
 .form_wrapper .form_dtn_wrap .btn {
@@ -3225,21 +3204,20 @@ footer .fee_link {
     height: 46px;
     background: none;
     border: none;
-    /* border-radius: 5px; */
     cursor: pointer;
 }
 
 .form_wrapper .form_dtn_wrap .btn_reset {
-    background: #d6d6d6;
-    color: #21283c;
+    background: rgb(214, 214, 214);
+    color: rgb(33, 40, 60);
     font-size: 16px;
     font-weight: bold;
     margin-right: 7px;
 }
 
 .form_wrapper .form_dtn_wrap .btn_submit {
-    background: #332c2a;
-    color: #fff;
+    background: rgb(51, 44, 42);
+    color: rgb(255, 255, 255);
     font-size: 18px;
     font-weight: bold;
 }
@@ -3250,9 +3228,6 @@ footer .fee_link {
     padding-left: 35.002px;
     cursor: pointer;
     font-size: 21.997px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 
@@ -3265,59 +3240,55 @@ footer .fee_link {
 .container-checkbox .checkmark {
     position: absolute;
     top: 3px;
-    left: 0;
+    left: 0px;
     height: 24px;
     width: 24px;
-    background-color: #eee;
+    background-color: rgb(238, 238, 238);
 }
 
 .container-checkbox:hover input ~ .checkmark {
-    background-color: #ccc;
+    background-color: rgb(204, 204, 204);
 }
 
 .container-checkbox input:checked ~ .checkmark {
-    background-color: #cb8ebd;
+    background-color: rgb(203, 142, 189);
 }
 
-.container-checkbox .checkmark:after {
+.container-checkbox .checkmark::after {
     content: "";
     position: absolute;
     display: none;
 }
 
-.container-checkbox input:checked ~ .checkmark:after {
+.container-checkbox input:checked ~ .checkmark::after {
     display: block;
 }
 
-.container-checkbox .checkmark:after {
+.container-checkbox .checkmark::after {
     left: 6px;
     top: 1.998px;
     width: 9px;
     height: 12.998px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
+    border-style: solid;
+    border-color: white;
+    border-image: initial;
+    border-width: 0px 3px 3px 0px;
     transform: rotate(45deg);
 }
 
 .doctor_list_selected {
-    border: 1px solid #21283c;
+    border: 1px solid rgb(33, 40, 60);
 }
 
-/* datepicker */
 .datepicker_wrap {
     position: relative;
 }
 
 .datepicker_wrap .datepicker_layer {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    inset: 0px;
     background: rgba(0, 0, 0, 0.7);
-    color: #fff;
+    color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3336,18 +3307,18 @@ footer .fee_link {
 }
 
 #wrap .ui-datepicker .ui-datepicker-title {
-    margin: 0 2.3em;
+    margin: 0px 2.3em;
     font-size: 16px;
-    color: #333;
+    color: rgb(51, 51, 51);
     font-weight: normal;
 }
 
 #wrap .ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
     border: none;
-    width: auto !important;
     background: none;
-    font-size: 16px !important;
     appearance: none;
+    width: auto !important;
+    font-size: 16px !important;
 }
 
 #wrap .ui-datepicker .ui-datepicker-prev {
@@ -3361,13 +3332,11 @@ footer .fee_link {
 }
 
 #wrap .ui-datepicker .ui-datepicker-prev span {
-    background: url("../images/sub/reserve_date_arrow.png") no-repeat center;
-    background-size: 8px 13px;
+    background: url("../images/sub/reserve_date_arrow.png") center center / 8px 13px no-repeat;
 }
 
 #wrap .ui-datepicker .ui-datepicker-next span {
-    background: url("../images/sub/reserve_date_arrow.png") no-repeat center;
-    background-size: 8px 13px;
+    background: url("../images/sub/reserve_date_arrow.png") center center / 8px 13px no-repeat;
     transform: scaleX(-1);
 }
 
@@ -3377,7 +3346,7 @@ footer .fee_link {
 }
 
 .call_consult_check_wrap.active {
-    border: 1px solid #21283c;
+    border: 1px solid rgb(33, 40, 60);
 }
 
 .doctor_schedule_4 {
@@ -3392,11 +3361,11 @@ footer .fee_link {
     border: none;
     text-align: center;
     font-size: 16px;
-    color: #333;
+    color: rgb(51, 51, 51);
     background: none;
     height: 36px;
     width: 36px;
-    margin: 0 auto;
+    margin: 0px auto;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -3404,21 +3373,19 @@ footer .fee_link {
 }
 
 #wrap .ui-state-active, #wrap .ui-widget-content .ui-state-active {
-    color: #fff;
-    background: #cb8ebd;
+    color: rgb(255, 255, 255);
+    background: rgb(203, 142, 189);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .subinfotxt {
-    color: #999;
+    color: rgb(153, 153, 153);
     font-size: 14px;
     font-weight: 400;
 }
 
-/* 온라인 예약 end */
-/* 프로모션 */
 .promotion_lists {
     margin-top: 150px;
     margin-bottom: 200px;
@@ -3428,12 +3395,10 @@ footer .fee_link {
     display: flex;
     flex-wrap: wrap;
     gap: 110px 70px;
-    /* border: 1px solid blue; */
 }
 
 .promotion_lists ul.promotion_content li {
-    /* flex: 0 1 auto; */
-    width: calc((100% - 140px) / 3);
+    width: calc(33.3333% - 46.6667px);
     display: flex;
 }
 
@@ -3446,11 +3411,10 @@ footer .fee_link {
 
 .promotion_img_box {
     width: 100%;
-    /* max-height: 100%; */
     display: block;
     position: relative;
-    flex: 1;
-    background: #efefef;
+    flex: 1 1 0%;
+    background: rgb(239, 239, 239);
 }
 
 .promotion_img_box img {
@@ -3462,12 +3426,11 @@ footer .fee_link {
 .promotion_txt_box {
     text-align: center;
     margin-top: 37px;
-    color: #333;
+    color: rgb(51, 51, 51);
     width: 100%;
 }
 
 .promotion_txt_box > p {
-    /* color: #333; */
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 23px;
@@ -3485,7 +3448,6 @@ footer .fee_link {
     display: block;
 }
 
-/* paging */
 .promotion_content + .common_paging {
     margin-top: 160px;
     display: flex;
@@ -3498,7 +3460,7 @@ footer .fee_link {
 }
 
 .common_paging > li {
-    border: 1px solid #332c2a;
+    border: 1px solid rgb(51, 44, 42);
     width: 40px;
     height: 40px;
     display: flex;
@@ -3509,8 +3471,6 @@ footer .fee_link {
 }
 
 .common_paging > li > a {
-    /* border: 1px solid rebeccapurple; */
-    display: block;
     width: 100%;
     height: 100%;
     display: flex;
@@ -3519,17 +3479,16 @@ footer .fee_link {
 }
 
 .common_paging > li.active {
-    background: #332c2a;
-    color: #fff;
+    background: rgb(51, 44, 42);
+    color: rgb(255, 255, 255);
 }
 
-/* 그램환 */
 .gramMedicine {
     text-align: center;
 }
 
 .gramSubCon {
-    padding: 150px 0;
+    padding: 150px 0px;
 }
 
 .rightSideInner {
@@ -3541,12 +3500,10 @@ footer .fee_link {
 }
 
 .subCon_title {
-    /* text-align: center; */
-    /* display: flex; */
 }
 
 .subCon_title_sml {
-    color: #5d5d5d;
+    color: rgb(93, 93, 93);
     font-size: 20px;
     display: block;
     margin-bottom: 17px;
@@ -3558,7 +3515,7 @@ footer .fee_link {
 }
 
 .subCon_mainTitle {
-    color: #151515;
+    color: rgb(21, 21, 21);
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 32px;
@@ -3566,15 +3523,15 @@ footer .fee_link {
 }
 
 .subCon_mainTitle.white {
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
 .subCon_mainTitle strong {
-    color: #cb8ebd;
+    color: rgb(203, 142, 189);
 }
 
 .subCon_subTitle {
-    color: #151515;
+    color: rgb(21, 21, 21);
     font-size: 22px;
     font-weight: 500;
 }
@@ -3585,16 +3542,12 @@ footer .fee_link {
 
 .subCon_title.leftSide {
     text-align: center;
-    /* margin-left: 50px; */
     max-width: 800px;
 }
 
 .subCon_title.rightSide {
     text-align: center;
-    /* display: flex; */
     max-width: 800px;
-    /* margin-left: auto; */
-    /* flex-direction: column; */
 }
 
 .subCon_title.gray .subCon_title_sml {
@@ -3621,7 +3574,7 @@ footer .fee_link {
 
 .medicineBox > div > div {
     width: calc(100% - 40px);
-    margin: 0 auto;
+    margin: 0px auto;
 }
 
 .medicineBox > div > div p {
@@ -3638,15 +3591,15 @@ footer .fee_link {
     word-break: keep-all;
 }
 
-.medicineBox > div > div span:before {
+.medicineBox > div > div span::before {
     content: "";
     height: 1px;
     width: 150px;
     position: absolute;
-    top: 0;
+    top: 0px;
     left: 50%;
     transform: translateX(-50%);
-    background: #a0a0a0;
+    background: rgb(160, 160, 160);
 }
 
 .medicineBox > div > div span strong {
@@ -3654,9 +3607,7 @@ footer .fee_link {
 }
 
 .medicineBasic {
-    background: url("../images/sub/sub09_content03.jpg") center;
-    background-size: cover;
-    /* width: 100%; */
+    background: url("../images/sub/sub09_content03.jpg") center center / cover;
     padding-left: 50px;
 }
 
@@ -3678,8 +3629,8 @@ footer .fee_link {
 
 .effectDivTag {
     display: inline-block;
-    color: #bfb3a2;
-    background: #151515;
+    color: rgb(191, 179, 162);
+    background: rgb(21, 21, 21);
     border-radius: 17px;
     font-size: 22px;
     font-weight: 700;
@@ -3688,7 +3639,7 @@ footer .fee_link {
 }
 
 .medicinePremium .effectDivTag {
-    color: #fff;
+    color: rgb(255, 255, 255);
     flex-shrink: 0;
 }
 
@@ -3703,10 +3654,10 @@ footer .fee_link {
     margin-bottom: 12px;
 }
 
-.effectDivLists li:before {
+.effectDivLists li::before {
     content: "";
     position: absolute;
-    left: 0;
+    left: 0px;
     top: 50%;
     transform: translateY(-50%);
     width: 20px;
@@ -3727,7 +3678,7 @@ footer .fee_link {
     background: rgba(255, 255, 255, 0.14);
     justify-content: center;
     line-height: 75px;
-    border: 1px solid #151515;
+    border: 1px solid rgb(21, 21, 21);
     margin-right: -24px;
     align-items: center;
     margin-bottom: 5px;
@@ -3735,7 +3686,7 @@ footer .fee_link {
 }
 
 .mainEffectBox li.pink {
-    border: 1px solid #b5639e;
+    border: 1px solid rgb(181, 99, 158);
 }
 
 .mainEffectBox li span {
@@ -3744,9 +3695,7 @@ footer .fee_link {
 }
 
 .medicinePremium {
-    background: url(../images/sub/sub09_content04.jpg) center;
-    background-size: cover;
-    /* width: 100%; */
+    background: url("../images/sub/sub09_content04.jpg") center center / cover;
     padding-left: 50px;
 }
 
@@ -3757,7 +3706,7 @@ footer .fee_link {
 }
 
 .effectDivSub {
-    color: #7d7d7d;
+    color: rgb(125, 125, 125);
     font-size: 16px;
     font-weight: 400;
 }
@@ -3769,16 +3718,16 @@ footer .fee_link {
 }
 
 .medicineGraph {
-    background: #574b49;
+    background: rgb(87, 75, 73);
     text-align: center;
 }
 
 .medicineGraph .subCon_title_sml {
-    color: #c3b3af;
+    color: rgb(195, 179, 175);
 }
 
 .medicineGraph .subCon_title_sml strong {
-    color: #cb8ebd;
+    color: rgb(203, 142, 189);
 }
 
 .medicineGraph .subCon_title {
@@ -3788,48 +3737,46 @@ footer .fee_link {
 }
 
 .medicineGraph img {
-    margin-top: 40px;
     width: calc(100% - 100px);
     display: block;
-    margin: 40px auto 0;
+    margin: 40px auto 0px;
     max-width: fit-content;
 }
 
 .medicineGraph .subCon_subTitle {
-    color: #c2b2ae;
+    color: rgb(194, 178, 174);
 }
 
 .medicineGraph .graph_txt {
     margin-top: 32px;
-    color: #c2b2ae;
+    color: rgb(194, 178, 174);
     font-size: 14px;
     font-weight: 400;
 }
 
 .medicinePackage {
-    background: #fafafa;
+    background: rgb(250, 250, 250);
     text-align: center;
 }
 
 .medicinePackage .subCon_title_sml strong {
-    color: #5c5c5c;
+    color: rgb(92, 92, 92);
 }
 
 .medicinePackage img {
-    width: 100%;
     display: block;
-    margin: 30px auto 0;
+    margin: 30px auto 0px;
     width: calc(100% - 100px);
 }
 
 .packageGuide {
-    border: 3px solid #2d2d2d;
-    background: #fff;
-    padding: 68px 0 90px;
+    border: 3px solid rgb(45, 45, 45);
+    background: rgb(255, 255, 255);
+    padding: 68px 0px 90px;
 }
 
 .packageGuide > span {
-    color: #bababa;
+    color: rgb(186, 186, 186);
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 16px;
@@ -3843,7 +3790,7 @@ footer .fee_link {
 }
 
 .packageGuide > p strong {
-    color: #d589c4;
+    color: rgb(213, 137, 196);
 }
 
 .packageGuide ul {
@@ -3857,28 +3804,27 @@ footer .fee_link {
     padding-bottom: 12px;
     position: relative;
     margin-bottom: 12px;
-    border-bottom: 1px solid #dfdfdf;
+    border-bottom: 1px solid rgb(223, 223, 223);
     padding-left: 40px;
 }
 
-.packageGuide ul li:before {
+.packageGuide ul li::before {
     content: "";
-    background-color: #d589c4;
+    background-color: rgb(213, 137, 196);
     width: 8px;
     height: 8px;
     border-radius: 50%;
     position: absolute;
     left: 14px;
     top: 12px;
-    /* transform: translateY(-50%); */
 }
 
 .packageLink {
     margin-top: 33px;
     display: block;
     border-radius: 60px;
-    background: #2d2d2d;
-    color: #fff;
+    background: rgb(45, 45, 45);
+    color: rgb(255, 255, 255);
     height: 120px;
 }
 
@@ -3894,17 +3840,18 @@ footer .fee_link {
 
 .packageLink span strong {
     font-weight: 700;
-    color: #d589c4;
+    color: rgb(213, 137, 196);
 }
 
 .packageLink span img {
     width: auto;
-    /* margin-left: 20px; */
-    margin: 0;
-    /* display: block; */
+    margin: 0px;
     transform: translateX(20px);
 }
-.root_daum_roughmap .cont .section.lst {display: none;}
+
+.root_daum_roughmap .cont .section.lst {
+    display: none;
+}
 
 @media (max-width: 1700px) {
     .before_and_after .mentBox > div {
@@ -3977,7 +3924,7 @@ footer .fee_link {
     }
 
     .make_history_lists {
-        margin-right: 0;
+        margin-right: 0px;
     }
 
     .sub_gram_special .content_txt_01 {
@@ -4017,12 +3964,11 @@ footer .fee_link {
         width: 500px;
     }
 
-    .form_wrapper form .step:after {
+    .form_wrapper form .step::after {
         left: 19px;
     }
 
     #wrap .ui-datepicker .ui-datepicker-prev {
-        /* left: 17%; */
         right: 65%;
         transform: translateX(50%);
         left: auto;
@@ -4053,8 +3999,8 @@ footer .fee_link {
     }
 
     .form_wrapper .step_02 .select_doctor_wrap {
-        width: auto !important;
         flex: 0 1 auto;
+        width: auto !important;
     }
 
     .form_wrapper form .step .numbering .text {
@@ -4066,24 +4012,24 @@ footer .fee_link {
         width: 40px;
         height: 40px;
         margin-right: 10px;
-        margin-left: 0;
+        margin-left: 0px;
     }
 
     .form_wrapper form .step .input_box_wrapper {
         width: 100%;
-        flex: 1;
+        flex: 1 1 0%;
         gap: 15px;
     }
 
     .form_wrapper form .step .input_box_wrapper .input_box {
         width: 100%;
         justify-content: flex-start;
-        flex: 1;
+        flex: 1 1 0%;
         column-gap: 15px;
     }
 
     .form_wrapper .step_02 .select_doctor_wrap {
-        margin-left: 0;
+        margin-left: 0px;
     }
 
     .form_wrapper .noti_box {
@@ -4104,7 +4050,7 @@ footer .fee_link {
     }
 
     .promotion_lists ul.promotion_content li {
-        width: calc((100% - 60px) / 3);
+        width: calc(33.3333% - 20px);
     }
 
     #gnb .depth1 > li {
@@ -4141,7 +4087,6 @@ footer .fee_link {
         font-size: 16px;
         padding: 20px;
         word-break: keep-all;
-        /* GAP: 5PX; */
     }
 
     .map_info_inner .right .subwayinfo .line7, .map_info_inner .right .subwayinfo .linenewbundang {
@@ -4150,9 +4095,12 @@ footer .fee_link {
     }
 }
 
-/* m1 */
 @media (max-width: 1024px) {
-    .rightImg {margin: 0;padding: 0;}
+    .rightImg {
+        margin: 0px;
+        padding: 0px;
+    }
+
     .packageLink {
         height: 70px;
     }
@@ -4178,7 +4126,7 @@ footer .fee_link {
     }
 
     .packageGuide {
-        padding: 35px 0 43px;
+        padding: 35px 0px 43px;
     }
 
     .medicineGraph img, .medicinePackage img {
@@ -4186,11 +4134,11 @@ footer .fee_link {
     }
 
     .effectDivSub {
-        color: #151515;
+        color: rgb(21, 21, 21);
     }
 
     .rightSideInner {
-        margin: 0;
+        margin: 0px;
     }
 
     .subCon_paragraph {
@@ -4235,18 +4183,16 @@ footer .fee_link {
     }
 
     .gramSubCon {
-        padding: 120px 0;
+        padding: 120px 0px;
     }
 
     .medicineBasic {
-        background: url("../images/sub/mo_sub09_content03.jpg") right bottom no-repeat;
-        background-size: cover;
+        background: url("../images/sub/mo_sub09_content03.jpg") right bottom / cover no-repeat;
         padding-bottom: 200px;
     }
 
     .medicinePremium {
-        background: url("../images/sub/mo_sub09_content04.jpg") center no-repeat;
-        background-size: cover;
+        background: url("../images/sub/mo_sub09_content04.jpg") center center / cover no-repeat;
         padding-bottom: 200px !important;
     }
 
@@ -4311,7 +4257,6 @@ footer .fee_link {
 
     .system_lists_capture ul > li.center {
         order: 1;
-        /* width: 100%; */
     }
 
     .system_lists_capture ul > li:last-child {
@@ -4326,19 +4271,17 @@ footer .fee_link {
     }
 
     .system_lists_capture ul > li {
-        width: 300px;
         flex: 0 0 auto;
-        margin: -42px !important;
         width: 100%;
+        margin: -42px !important;
     }
 
     .system_lists_capture {
-        padding: 0;
+        padding: 0px;
     }
 
     .picture_info {
-        flex: 1;
-        /* border: 1px solid red; */
+        flex: 1 1 0%;
         max-width: 330px;
     }
 
@@ -4349,20 +4292,19 @@ footer .fee_link {
     }
 
     .sub_graduation03 .graduation_step_lists > li {
-        /* flex-direction: column; */
-        flex: 1;
+        flex: 1 1 0%;
     }
 
     .graduation_step_lists > li .stepTxt {
-        /* flex: 1; */
         width: 22%;
     }
+
     .sub_graduation03 .graduation_step_lists > li .stepTxt {
         width: 100%;
     }
 
     .sub_graduation02 .subContainer, .sub_graduation03 .subContainer {
-        padding: 0 20px;
+        padding: 0px 20px;
     }
 
     .graduation_step_lists > li .stepTxt .title {
@@ -4420,7 +4362,7 @@ footer .fee_link {
 
     .sub_graduation02, .sub_graduation03, .sub_graduation04 {
         padding-top: 100px;
-        margin-top: 0;
+        margin-top: 0px;
     }
 
     .graduation_title_content .txt1 {
@@ -4430,14 +4372,14 @@ footer .fee_link {
     .sub_graduation01 .packagePicto ul {
         flex-wrap: wrap;
         width: 56%;
-        padding-top: 0;
+        padding-top: 0px;
     }
 
     .sub_graduation01 .packagePicto ul li {
         width: 23.4375vw;
         height: 23.4375vw;
         font-size: 20px;
-        margin: 0 -13px -13px 0;
+        margin: 0px -13px -13px 0px;
     }
 
     .sub_graduation01 .packageBox .ment3 {
@@ -4457,7 +4399,7 @@ footer .fee_link {
     .sub_graduation01 .packageBox {
         padding-top: 80px;
         max-width: 100%;
-        padding-bottom: 0;
+        padding-bottom: 0px;
     }
 
     .sub_graduation01 .packagePicto p {
@@ -4486,11 +4428,11 @@ footer .fee_link {
     }
 
     .sub_gram_special .special_content {
-        padding: 120px 0 90px;
+        padding: 120px 0px 90px;
     }
 
     .sub_gram_special .subContainer {
-        padding: 0 30px;
+        padding: 0px 30px;
     }
 
     .sub_gram_special .special_content01 {
@@ -4525,7 +4467,7 @@ footer .fee_link {
 
     .sub_spirit .spirit_content.rotation {
         flex-direction: column-reverse;
-        padding: 0 30px;
+        padding: 0px 30px;
     }
 
     .sub_spirit .keyword_box .keyword_subtxt {
@@ -4534,12 +4476,11 @@ footer .fee_link {
     }
 
     .sub_spirit .oriental_character > div {
-        /* margin-top: 5%; */
         position: relative;
     }
 
     .sub_spirit .keyword_box {
-        margin-top: 0;
+        margin-top: 0px;
     }
 
     .sub_spirit .img_box.radius_left_top, .sub_spirit .img_box.radius_right_top {
@@ -4548,7 +4489,7 @@ footer .fee_link {
     }
 
     .sub_spirit .spirit_content {
-        padding: 0 30px;
+        padding: 0px 30px;
         flex-direction: column-reverse;
         gap: 30px;
     }
@@ -4569,7 +4510,7 @@ footer .fee_link {
         word-break: keep-all;
     }
 
-    .container-checkbox .checkmark:after {
+    .container-checkbox .checkmark::after {
         width: 6px;
         height: 10px;
     }
@@ -4594,9 +4535,8 @@ footer .fee_link {
     }
 
     .call_consult_check_wrap {
-        flex-direction: row;
+        flex-flow: wrap;
         justify-content: flex-start;
-        flex-wrap: wrap;
     }
 
     .call_consult_check_wrap .tit {
@@ -4672,7 +4612,7 @@ footer .fee_link {
     }
 
     .promotion_lists ul.promotion_content li {
-        width: calc((100% - 30px) / 2);
+        width: calc(50% - 15px);
     }
 
     .hospital_map_info {
@@ -4693,7 +4633,7 @@ footer .fee_link {
     }
 
     .gallery_section {
-        padding: 60px 0;
+        padding: 60px 0px;
     }
 
     .galleryMain {
@@ -4705,15 +4645,15 @@ footer .fee_link {
     }
 
     .gallery_thumbs {
-        padding: 0 30px;
+        padding: 0px 30px;
     }
 
-    .gallery_thumbs .swiper-button-prev:after, .gallery_thumbs .swiper-button-next:after {
+    .gallery_thumbs .swiper-button-prev::after, .gallery_thumbs .swiper-button-next::after {
         font-size: 16px;
     }
 
     .map_info_inner .right .subwayinfo {
-        margin: 0;
+        margin: 0px;
         width: 100% !important;
     }
 
@@ -4732,7 +4672,7 @@ footer .fee_link {
     }
 
     .map_info_inner .right .kakaoMapBox {
-        padding: 0;
+        padding: 0px;
     }
 
     .map_info_inner .inforow_con .subinfo {
@@ -4821,12 +4761,12 @@ footer .fee_link {
 
     .doctorIntroduce .btm img {
         max-width: 600px;
-        margin: 0 auto;
+        margin: 0px auto;
     }
 
     .doctorIntroduce .btm {
         flex-direction: column;
-        padding: 0;
+        padding: 0px;
     }
 
     .doctorIntroduce .top {
@@ -4836,7 +4776,7 @@ footer .fee_link {
 
     .doctorIntroduce .top .ment {
         font-size: 30px;
-        padding: 0 20px;
+        padding: 0px 20px;
         word-break: keep-all;
     }
 
@@ -5057,7 +4997,7 @@ footer .fee_link {
     }
 
     .main_middle_content .mentBox p {
-        font-size: 30px;
+        font-size: 26px;
         margin-bottom: 20px;
     }
 
@@ -5160,7 +5100,7 @@ footer .fee_link {
     }
 
     .main_event_swiperbox {
-        margin-top: 0;
+        margin-top: 0px;
         padding-top: 60px;
         padding-bottom: 40px;
     }
@@ -5234,12 +5174,12 @@ footer .fee_link {
 
     .main_gramAbility .tabBox ul li a {
         border: none;
-        font-size: 19px;
+        font-size: 16px;
     }
 
     .main_gramAbility .fadeinoutImg > div img {
         position: relative;
-        padding-top: 224px;
+        padding-top: 214px;
         min-height: 706px;
         object-fit: cover;
         object-position: left center;
@@ -5309,7 +5249,7 @@ footer .fee_link {
     }
 
     .kakaoMapBox .addressBox > div > p {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 400;
     }
 
@@ -5474,10 +5414,10 @@ footer .fee_link {
 
 @media (max-width: 730px) {
     .graduation_checklists {
-        padding-left: 0;
+        padding-left: 0px;
     }
+
     .sub_graduation01 .packagePicto ul {
-        /* justify-content: center; */
     }
 
     .sub_graduation01 .packagePicto ul li {
@@ -5500,7 +5440,10 @@ footer .fee_link {
     .graduation_checklists > li {
         font-size: 13px;
     }
-    .sub_graduation01 .packagePicto p {margin-bottom: 20px;}
+
+    .sub_graduation01 .packagePicto p {
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -5520,7 +5463,11 @@ footer .fee_link {
         font-size: 35px;
         margin-bottom: 32px;
     }
-    .sub_graduation01 .packagePicto ul li {width: 134px;height: 134px;}
+
+    .sub_graduation01 .packagePicto ul li {
+        width: 134px;
+        height: 134px;
+    }
 
     .sub_graduation02, .sub_graduation03, .sub_graduation04 {
         padding-bottom: 50px;
@@ -5554,7 +5501,7 @@ footer .fee_link {
     }
 
     .graduation_step_lists > li .stepTxt {
-        margin-top: 0;
+        margin-top: 0px;
         max-width: 150px;
         width: 100%;
     }
@@ -5626,7 +5573,7 @@ footer .fee_link {
     .special_content_icolists > li {
         width: 180px;
         height: 180px;
-        flex: 0 auto;
+        flex: 0 1 auto;
         margin: -14px !important;
     }
 
@@ -5724,7 +5671,7 @@ footer .fee_link {
     }
 
     .map_info_inner .right .subwayinfo {
-        padding: 0;
+        padding: 0px;
     }
 
     .parking_info {
@@ -5742,12 +5689,15 @@ footer .fee_link {
     }
 }
 
-/* m2 */
 @media (max-width: 400px) {
-    .sub_graduation01 {min-height: 563px;}
+    .sub_graduation01 {
+        min-height: 563px;
+    }
+
     .sub_graduation01 .packagePicto ul {
         width: 287px;
     }
+
     .medicineGraph img, .medicinePackage img {
         width: 100%;
     }
@@ -5768,7 +5718,7 @@ footer .fee_link {
         margin-bottom: 40px;
     }
 
-    .packageGuide ul li:before {
+    .packageGuide ul li::before {
         width: 6px;
         height: 6px;
         top: 6px;
@@ -5790,7 +5740,7 @@ footer .fee_link {
     }
 
     .packageGuide {
-        padding: 34px 0 45px;
+        padding: 34px 0px 45px;
     }
 
     .medicineGraph .graph_txt {
@@ -5890,7 +5840,7 @@ footer .fee_link {
     }
 
     .gramSubCon {
-        padding: 60px 0;
+        padding: 60px 0px;
     }
 
     .recommendImg {
@@ -5957,7 +5907,7 @@ footer .fee_link {
     }
 
     .sub_gram_special .special_content {
-        padding: 60px 0 48px;
+        padding: 60px 0px 48px;
     }
 
     .special_content_icolists > li > span {
@@ -6005,7 +5955,7 @@ footer .fee_link {
     }
 
     .sub_gram_special .special_content03 .special_content_box {
-        margin-top: 0;
+        margin-top: 0px;
     }
 
     .sub_content_title .title2 {
@@ -6037,11 +5987,11 @@ footer .fee_link {
     }
 
     .sub_spirit .img_box.radius_left_top, .sub_spirit .img_box.radius_right_top {
-        margin-top: 0;
+        margin-top: 0px;
     }
 
     .sub_spirit .spirit_content {
-        margin-top: 0;
+        margin-top: 0px;
     }
 
     .sub_spirit .oriental_character span {
@@ -6090,7 +6040,7 @@ footer .fee_link {
 
     #wrap .ui-datepicker th {
         font-size: 13px;
-        padding: 0;
+        padding: 0px;
     }
 
     .datepicker_wrap .datepicker_layer {
@@ -6102,14 +6052,14 @@ footer .fee_link {
     }
 
     .doctor {
-        padding: 10px 10px 0;
+        padding: 10px 10px 0px;
     }
 
     .form_wrapper .grey_btn {
         font-size: 13px;
         width: 72px;
         height: 24px;
-        margin-right: 0 !important;
+        margin-right: 0px !important;
     }
 
     .doctor .doctor_info .doc_name {
@@ -6140,7 +6090,7 @@ footer .fee_link {
         font-size: 18px;
     }
 
-    .form_wrapper form .step:after {
+    .form_wrapper form .step::after {
         left: 15px;
     }
 
@@ -6203,7 +6153,7 @@ footer .fee_link {
     }
 
     .gallery_section {
-        padding: 40px 0;
+        padding: 40px 0px;
     }
 
     .galleryMain {
@@ -6215,7 +6165,7 @@ footer .fee_link {
     }
 
     .gallery_thumbs {
-        padding: 0 40px;
+        padding: 0px 40px;
     }
 
     .gallery_thumbs .swiper-button-prev, .gallery_thumbs .swiper-button-next {
@@ -6223,7 +6173,7 @@ footer .fee_link {
         height: 30px;
     }
 
-    .gallery_thumbs .swiper-button-prev:after, .gallery_thumbs .swiper-button-next:after {
+    .gallery_thumbs .swiper-button-prev::after, .gallery_thumbs .swiper-button-next::after {
         font-size: 14px;
     }
 
@@ -6388,7 +6338,6 @@ footer .fee_link {
 
     .main_banner_video {
         height: 100vh;
-        /* max-height: 100vh; */
     }
 
     .main_banner_video .banner_tit_wrap {
@@ -6436,7 +6385,7 @@ footer .fee_link {
     }
 
     .main_speciality {
-        margin-top: 0;
+        margin-top: 0px;
     }
 
     .main_speciality img {
@@ -6458,7 +6407,7 @@ footer .fee_link {
     }
 
     .main_event_swiperbox {
-        margin-top: 0;
+        margin-top: 0px;
         padding-top: 40px;
     }
 
@@ -6503,15 +6452,15 @@ footer .fee_link {
     }
 
     .main_gramAbility .tabBox ul li {
-        padding: 11px 17px;
+        padding: 11px 15px;
     }
 
     .main_gramAbility .tabBox ul li a {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .main_gramAbility .fadeinoutImg > div img {
-        padding-top: 170px;
+        padding-top: 166px;
         min-height: 545px;
     }
 
@@ -6619,6 +6568,8 @@ footer .fee_link {
         width: calc(100% - 70px);
         height: 28px;
         font-size: 14px;
+        flex: 1;
+        max-width: calc(100% - 70px);
     }
 
     .ctaForm .formBox div.radioGroup {

@@ -184,6 +184,8 @@
   letter-spacing: -0.025em;
 }
 
+html,body {overflow-x: hidden; overflow-y: auto;}
+
 html,
 body,
 div,
