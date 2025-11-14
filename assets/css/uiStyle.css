@@ -35,9 +35,8 @@ body:has(.moGnbMenu.active), html:has(.moGnbMenu.active) {
 .pageContainer03 {
     max-width: 1770px;
     width: 100%;
-    margin-left: 0px;
-    margin-right: auto;
-    padding: 0px 20px 0px 0px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .pageContainer04 {
@@ -45,6 +44,7 @@ body:has(.moGnbMenu.active), html:has(.moGnbMenu.active) {
     width: 100%;
     margin: 0px auto;
     display: flex;
+    /* overflow: hidden; */
 }
 
 .subContainer {
@@ -956,13 +956,16 @@ header + main {
 }
 
 .hospitalInfo {
-    margin-top: -1px;
+    /* margin-top: -1px; */
+    overflow: hidden;
 }
 
 .kakaoMapBox {
     max-width: 550px;
     flex: 0 1 auto;
     width: 33%;
+    /* margin-top: -19px; */
+    /* padding-top: 5px; */
 }
 
 .kakaoMapBox > div {
