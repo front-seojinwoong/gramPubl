@@ -1100,12 +1100,13 @@ header + main {
 }
 
 .ctaForm .formBox div input[type="text"] {
-    flex: 1 1 0%;
+    /* flex: 1 1 0%; */
     background: none;
     border: 1px solid rgb(255, 255, 255);
     height: 40px;
     color: rgb(255, 255, 255);
     padding: 0px 10px;
+    width: 100%;
 }
 
 .ctaForm .formBox div input[type="radio"] {
@@ -4096,6 +4097,7 @@ footer .fee_link {
 }
 
 @media (max-width: 1024px) {
+
     .rightImg {
         margin: 0px;
         padding: 0px;
@@ -4997,7 +4999,7 @@ footer .fee_link {
     }
 
     .main_middle_content .mentBox p {
-        font-size: 26px;
+        font-size: 23px;
         margin-bottom: 20px;
     }
 
@@ -5182,7 +5184,7 @@ footer .fee_link {
         padding-top: 214px;
         min-height: 706px;
         object-fit: cover;
-        object-position: left center;
+        object-position: right center;
     }
 
     .main_gramAbility .fadeinoutImg {
@@ -5626,6 +5628,7 @@ footer .fee_link {
     .map_info_inner .inforow_con > span, .map_info_inner .inforow_con .timeline > span, .map_info_inner .inforow_con .subinfo {
         font-size: 15px;
     }
+    .sub_graduation01 .bgInner > img {object-position: right bottom;}
 }
 
 @media (max-width: 500px) {
@@ -5691,7 +5694,7 @@ footer .fee_link {
 
 @media (max-width: 400px) {
     .sub_graduation01 {
-        min-height: 563px;
+        min-height: 607px;
     }
 
     .sub_graduation01 .packagePicto ul {
@@ -6320,7 +6323,7 @@ footer .fee_link {
     }
 
     .main_middle_content .mentBox p {
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 13px;
     }
 
@@ -6568,7 +6571,6 @@ footer .fee_link {
         width: calc(100% - 70px);
         height: 28px;
         font-size: 14px;
-        flex: 1;
         max-width: calc(100% - 70px);
     }
 
