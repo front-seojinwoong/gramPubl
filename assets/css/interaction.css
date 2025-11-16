@@ -169,23 +169,15 @@
   transform: scale(1.05);
 }
 
-
 /* subpage9 - 그램환 */
-.medicineBox .left,
-.medicineBox .right,
-.medicinePackage img {
-  overflow: hidden;
-}
 
 .medicineBox .left img,
-.medicineBox .right img,
-.medicinePackage img {
+.medicineBox .right img{
   transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .medicineBox .left:hover img,
-.medicineBox .right:hover img,
-.medicinePackage:hover img {
+.medicineBox .right:hover img{
   transform: scale(1.05);
 }
 
@@ -213,34 +205,10 @@
 
 /* 7. 반응형 디바이스 최적화 */
 @media (max-width: 768px) {
-  /* 모바일에서는 호버 효과 비활성화 (터치 디바이스) */
-  .hover-scale-wrap:hover img,
-  .sub_graduation01 .bgInner:hover img,
-  .graduation_step_lists li .picture:hover img,
-  .compareImg:hover img,
-  .recommend_lists li:hover,
-  .spirit_content .img_box:hover img,
-  .special_content_icolists li:hover img,
-  .make_history_lists li:hover img,
-  .subitro01 .inner .inner_left:hover img,
-  .subitro02 ul li:hover img,
-  .subitro03 .inner:hover .inner_right,
-  .doctorIntroduce .btm:hover img,
-  .medicineBox .left:hover img,
-  .medicineBox .right:hover img,
-  .medicinePackage:hover img,
-  .main_gramAbility .fadeinoutImgBox0:hover img,
-  .main_gramAbility .fadeinoutImgBox1:hover img,
-  .main_gramAbility .fadeinoutImgBox2:hover img,
-  .main_gramAbility .fadeinoutImgBox3:hover img {
-    transform: none;
-  }
-
   /* 스크롤 애니메이션은 모바일에서도 유지 */
   .scroll-fade-in {
     transform: translateY(30px);
   }
-
   /* 배너 애니메이션 속도 조정 */
   .sub_banner .inner .bg {
     animation-duration: 1s;
@@ -275,19 +243,6 @@
 }
 
 /* 10. 링크 및 버튼 호버 효과 */
-.packageLink {
-  overflow: hidden;
-  position: relative;
-}
-
-.packageLink span {
-  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  display: inline-block;
-}
-
-.packageLink:hover span {
-  transform: translateX(5px);
-}
 
 /* ========================================
    MAIN PAGE Interaction Effects
@@ -491,49 +446,12 @@
 
 /* 메인페이지 반응형 */
 @media (max-width: 768px) {
-  /* 모바일에서 호버 효과 조정 */
-  .main_middle_content .topContent:hover .leftCon img,
-  .main_middle_content .btmContent:hover .rightCon img,
-  .before_and_after .beforeafterSwiper .swiper-slide:hover img,
-  .main_speciality .panel li:hover img,
-  .main_event_swiperbox .eventSwiper .swiper-slide:hover img,
-  .main_gramAbility .fadeinoutImgBox0:hover img,
-  .main_gramAbility .fadeinoutImgBox1:hover img,
-  .main_gramAbility .fadeinoutImgBox2:hover img,
-  .main_gramAbility .fadeinoutImgBox3:hover img {
-    transform: none;
-  }
-
-  .main_middle_content .mentBox a:hover img {
-    transform: none;
-  }
-
-  .main_speciality .panel li:hover strong,
-  .main_speciality .panel li:hover p {
-    transform: none;
-  }
-
-  .main_event_swiperbox .eventSwiper .swiper-slide:hover .event_info {
-    transform: none;
-  }
-
-  .sns_list li a:hover {
-    transform: none;
-  }
-
-  .ctaForm .submitBtn:hover {
-    transform: none;
-  }
-
-  /* 모바일에서도 스크롤 애니메이션은 유지 */
   .main-scroll-fade {
     transform: translateY(30px);
   }
-
   .scroll-fade-left {
     transform: translateX(-30px);
   }
-
   .scroll-fade-right {
     transform: translateX(30px);
   }

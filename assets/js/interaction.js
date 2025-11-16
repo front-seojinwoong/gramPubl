@@ -119,23 +119,6 @@
     }
   };
 
-  // 모바일 터치 이벤트 최적화
-  const mobileOptimization = {
-    init: function() {
-      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
-      if (isMobile) {
-        document.body.classList.add('mobile-device');
-
-        // 터치 이벤트에 대한 호버 효과 비활성화
-        const hoverElements = document.querySelectorAll('.hover-scale-wrap');
-        hoverElements.forEach(function(element) {
-          element.classList.add('touch-device');
-        });
-      }
-    }
-  };
-
   // 메인페이지 전용 스크롤 애니메이션
   const mainPageAnimations = {
     init: function() {
@@ -282,7 +265,7 @@
 
     // subpage9 - 그램환
     subpage9: function() {
-      const medicineSections = document.querySelectorAll('.gramSubCon');
+      const medicineSections = document.querySelectorAll('.gramSubCon .subContainer');
       medicineSections.forEach(function(section) {
         section.classList.add('scroll-fade-in');
       });
@@ -354,7 +337,6 @@
 
   function init() {
     // 모든 모듈 초기화
-    mobileOptimization.init();
     bannerAnimation.init();
     pageSpecificAnimations.init();
     scrollObserver.init();
