@@ -4035,7 +4035,7 @@ footer .fee_link {
 
 .decoctionStepBox03 {
     margin: 0;
-    background: url("../images/sub10/sub10_content4.jpg") center / cover no-repeat;
+    background: url("../images/sub/sub10_content4.jpg") center / cover no-repeat;
     height: 625px;
     padding-top: 150px;
 }
@@ -4071,7 +4071,7 @@ display: flex;
     margin-bottom: 7px;
     position: relative;
 }
-.decoctionRecommendLists li:before{content:"";position: absolute;width:20px;height:19px;background: url("../images/sub10/ico_checker_lightpink.png");left: 22px;}
+.decoctionRecommendLists li:before{content:"";position: absolute;width:20px;height:19px;background: url("../images/sub/ico_checker_lightpink.png");left: 22px;}
 
 
 @media (max-width: 1700px) {
@@ -4323,7 +4323,7 @@ display: flex;
     .decoctionRecommendLists li {font-size: 20px;}
     .decoctionRecommend {padding: 120px 0 !important;}
     .decoctionRecommend .inner {flex-direction: column;padding: 0 20px;}
-    .decoctionStepBox03 {background: url("../images/sub10/mo_sub10_content4.jpg") center / cover no-repeat;height: auto;margin-bottom: 0 !important;padding: 120px 0 300px;}
+    .decoctionStepBox03 {background: url("../images/sub/mo_sub10_content4.jpg") center / cover no-repeat;height: auto;margin-bottom: 0 !important;padding: 120px 0 300px;}
     .decoctionRecommendLists {max-width: 100%;}
     .decoctionStepBox02 {padding: 120px 0;margin-bottom: 0 !important;}
     .decoctionStepBox02 .inner {gap: 34px;}
