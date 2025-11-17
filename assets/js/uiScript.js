@@ -84,8 +84,8 @@ $(document).ready(function () {
     },
     speed: 1000,
     navigation: {
-      nextEl: ".beforeafterSwiper .swiper-button-next",
-      prevEl: ".beforeafterSwiper .swiper-button-prev",
+      nextEl: ".beforeafterSwiperWrap .swiper-button-next",
+      prevEl: ".beforeafterSwiperWrap .swiper-button-prev",
     },
   });
 
