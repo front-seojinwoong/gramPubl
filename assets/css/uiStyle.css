@@ -675,6 +675,17 @@ header + main {
 
 .before_and_after {
     margin-top: 327px;
+    position: relative;
+}
+.before_and_after:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background-color: rgb(232, 227, 227);
+        display: block;
+        content: "";
 }
 
 .before_and_after .pageContainer03 {
@@ -683,7 +694,7 @@ header + main {
 }
 
 .before_and_after .mentBox {
-    background: rgb(232, 227, 227);
+    /* background: rgb(232, 227, 227); */
     width: 50%;
     height: 697px;
     display: flex;
@@ -717,7 +728,7 @@ header + main {
 }
 
 .before_and_after .swiper-button-next {
-    right: -63px;
+    right: -73px;
 }
 
 .main_speciality {
@@ -1936,8 +1947,8 @@ header + main {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
-    gap: 120px;
-    padding: 0px 64px 0px 130px;
+    padding: 0px 64px 0px 104px;
+    gap: 80px;
 }
 
 .sub_spirit .spirit_content.rotation {
@@ -1960,6 +1971,7 @@ header + main {
     border-left: 2px solid rgb(203, 142, 189);
     padding-left: 20px;
     font-size: 18px;
+    word-break: keep-all;
     line-height: 1.6;
 }
 
@@ -2052,6 +2064,7 @@ header + main {
 
 .sub_gram_special .content_txt_02 {
     line-height: 1.6;
+    word-break: keep-all;
 }
 
 .special_content_icolists {
@@ -3863,8 +3876,8 @@ footer .fee_link {
     }
 
     .before_and_after .beforeafterSwiper {
-        margin-left: -350px;
-        width: calc(100% + 350px);
+        margin-left: -390px;
+        width: calc(100% + 390px);
     }
 
     .main_middle_content .rightCon > img {
@@ -3897,7 +3910,7 @@ footer .fee_link {
     }
 
     .before_and_after .swiper-button-prev {
-        left: -410px;
+        left: -478px;
     }
 
     .before_and_after .mentBox {
@@ -3919,12 +3932,16 @@ footer .fee_link {
 }
 
 @media (max-width: 1400px) {
+    .sub_spirit .spirit_content {gap:40px;}
+    .sub_spirit .keyword_box .keyword_subtxt {
+        font-size: 16px;
+    }
     .graduation_checklists {
         padding-left: 56px;
     }
 
     .sub_gram_special .special_content_txt {
-        margin-right: 20px;
+        /* margin-right: 20px; */
     }
 
     .make_history_lists {
@@ -3936,12 +3953,13 @@ footer .fee_link {
     }
 
     .special_content_icolists > li > span {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .special_content_icolists > li {
         width: 200px;
         height: 200px;
+        gap: 15px;
     }
 
     .special_content_icolists > li > img {
@@ -3960,12 +3978,9 @@ footer .fee_link {
         max-width: 80%;
     }
 
-    .sub_spirit .spirit_content {
-        gap: 60px;
-    }
 
     .sub_spirit .img_box.radius_left_top, .sub_spirit .img_box.radius_right_top {
-        width: 500px;
+        width: 450px;
     }
 
     .form_wrapper form .step::after {
@@ -4100,7 +4115,14 @@ footer .fee_link {
 }
 
 @media (max-width: 1024px) {
-
+.before_and_after:before {width: 100%;height: 50%;}
+    .subitro01 .inner > .inner_right img {
+        max-width: 165px;
+        margin-bottom: 40px;
+    }
+    .sub_gram_special .content_txt_02 {
+        font-size: 14px;
+    }
     .rightImg {
         margin: 0px;
         padding: 0px;
@@ -4112,7 +4134,7 @@ footer .fee_link {
 
     .packageLink span {
         margin-top: 60px;
-        font-size: 25px;
+        font-size: 23px;
         margin-bottom: 80px;
     }
 
@@ -4478,6 +4500,8 @@ footer .fee_link {
     .sub_spirit .keyword_box .keyword_subtxt {
         margin-top: 40px;
         width: 100%;
+        font-size: 14px;
+        padding-left: 10px;
     }
 
     .sub_spirit .oriental_character > div {
@@ -4780,8 +4804,8 @@ footer .fee_link {
     }
 
     .doctorIntroduce .top .ment {
-        font-size: 30px;
-        padding: 0px 20px;
+        font-size: 22px;
+        padding: 0;
         word-break: keep-all;
     }
 
@@ -4868,6 +4892,7 @@ footer .fee_link {
 
     .subitro01 .inner > .inner_right p {
         word-break: keep-all;
+        font-size: 15px;
     }
 
     .subitro01 .inner > .inner_right p strong {
@@ -5337,6 +5362,9 @@ footer .fee_link {
         height: auto;
         width: 100%;
     }
+    .sub_banner.doctor_banner {
+        max-height: 100%;
+    }
 
     .sub_banner .subContainer {
         align-items: flex-end;
@@ -5387,6 +5415,7 @@ footer .fee_link {
 
     .bannerTxtBox .txt1 {
         font-size: 40px;
+        margin-bottom: 35px;
     }
 
     .bannerTxtBox .txt2 {
@@ -5413,11 +5442,18 @@ footer .fee_link {
 
     .subitro01 .inner > .inner_right {
         width: 100%;
-        margin-top: 120px;
+        margin-top: 70px;
     }
 }
 
 @media (max-width: 730px) {
+    .subitro02 ul li img {
+        max-width: 300px;
+    }
+    .subitro02 ul li span,
+    .subitro02 ul li .hashtag {
+        font-size: 16px;
+    }
     .graduation_checklists {
         padding-left: 0px;
     }
@@ -5452,6 +5488,13 @@ footer .fee_link {
 }
 
 @media (max-width: 600px) {
+    .subitro03 .inner .inner_left p {
+        margin-bottom: 25px;
+        font-size: 24px;
+    }
+    .subitro03 .inner .inner_left span {
+        font-size: 15px;
+    }
     .recommend_lists li {
         font-size: 15px;
     }
@@ -5599,7 +5642,7 @@ footer .fee_link {
     }
 
     .subitro02 ul li img {
-        width: 200px;
+        width: 170px;
     }
 
     .phone01 {
@@ -5635,6 +5678,28 @@ footer .fee_link {
 }
 
 @media (max-width: 500px) {
+    .subitro01 .inner > .inner_right img {
+        width: 115px;
+        margin-bottom: 30px;
+    }
+    .subitro01 .inner > .inner_right p {
+        font-size: 13px;
+    }
+    .sub_banner .bannerTxtBox .txt1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .sub_banner .bannerTxtBox .txt2 {font-size: 15px;}
+    .sub_spirit .spirit_content,
+    .sub_spirit .spirit_content.rotation {padding: 0px;}
+    .packageLink span {
+        font-size: 20px;
+    }
+    .packageLink span img {
+     transform: translateX(6px);   
+     width: 30px;
+    }
     .graduation_step_lists > li div.picture img {
         width: 150px;
     }
@@ -5696,6 +5761,7 @@ footer .fee_link {
 }
 
 @media (max-width: 400px) {
+    .mo_hide {display: none;}
     .sub_graduation01 {
         min-height: 607px;
     }
@@ -5922,6 +5988,7 @@ footer .fee_link {
 
     .special_content_icolists > li > img {
         width: 36px;
+        margin-top: 15px;
     }
 
     .special_content_icolists > li:nth-child(2) > img {
@@ -5929,13 +5996,13 @@ footer .fee_link {
     }
 
     .special_content_icolists > li {
-        width: 140px;
-        height: 140px;
+        width: 158px;
+        height: 158px;
         gap: 16px;
     }
 
     .sub_gram_special .content_txt_02 {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .sub_gram_special .content_txt_01 {
@@ -5985,7 +6052,8 @@ footer .fee_link {
 
     .sub_spirit .keyword_box .keyword_subtxt {
         margin-top: 20px;
-        font-size: 14px;
+        font-size: 13px;
+        /* white-space: nowrap; */
     }
 
     .sub_spirit .keyword_box .keyword {
@@ -6244,12 +6312,13 @@ footer .fee_link {
     }
 
     .subitro03 .inner .inner_left p {
-        font-size: 24px;
-        margin-bottom: 38px;
+        /* font-size: 22px; */
+        /* margin-bottom: 38px; */
     }
 
     .subitro03 .inner .inner_left {
         margin-top: 50px;
+        padding: 0 8px;
     }
 
     .subitro01 {
@@ -6280,7 +6349,7 @@ footer .fee_link {
     }
 
     .subitro02 ul li img {
-        width: 175px;
+        width: 125px;
     }
 
     .subitro02 ul li {

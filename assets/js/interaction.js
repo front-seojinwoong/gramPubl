@@ -92,33 +92,6 @@
     }
   };
 
-  // 이미지 lazy loading 최적화
-  const lazyLoadImages = {
-    init: function() {
-      if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver(function(entries) {
-          entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-              const img = entry.target;
-
-              if (img.dataset.src) {
-                img.src = img.dataset.src;
-                img.removeAttribute('data-src');
-              }
-
-              imageObserver.unobserve(img);
-            }
-          });
-        });
-
-        const lazyImages = document.querySelectorAll('img[data-src]');
-        lazyImages.forEach(function(img) {
-          imageObserver.observe(img);
-        });
-      }
-    }
-  };
-
   // 메인페이지 전용 스크롤 애니메이션
   const mainPageAnimations = {
     init: function() {
@@ -277,11 +250,6 @@
       });
     },
 
-    // index - 메인페이지
-    index: function() {
-      mainPageAnimations.init();
-    },
-
     init: function() {
       // 현재 페이지 감지 및 해당 애니메이션 실행
       const bodyClass = document.body.className;
@@ -298,36 +266,6 @@
     }
   };
 
-  // 성능 최적화를 위한 throttle 함수
-  function throttle(func, delay) {
-    let lastCall = 0;
-    return function(...args) {
-      const now = new Date().getTime();
-      if (now - lastCall < delay) {
-        return;
-      }
-      lastCall = now;
-      return func(...args);
-    };
-  }
-
-  // 스크롤 이벤트 최적화
-  const scrollPerformance = {
-    init: function() {
-      let ticking = false;
-
-      window.addEventListener('scroll', function() {
-        if (!ticking) {
-          window.requestAnimationFrame(function() {
-            // 여기에 스크롤 관련 추가 로직 작성 가능
-            ticking = false;
-          });
-          ticking = true;
-        }
-      });
-    }
-  };
-
   // DOM이 로드되면 초기화
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
@@ -341,8 +279,6 @@
     pageSpecificAnimations.init();
     scrollObserver.init();
     smoothScroll.init();
-    lazyLoadImages.init();
-    scrollPerformance.init();
 
     // 페이지 전환 시 애니메이션 리셋
     window.addEventListener('pageshow', function(event) {
