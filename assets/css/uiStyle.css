@@ -5,6 +5,12 @@ body:has(.moGnbMenu.active), html:has(.moGnbMenu.active) {
 .mt_40 {
     margin-top: 40px !important;
 }
+.pb_0 {padding-bottom: 0 !important;}
+.pt_0 {padding-top: 0 !important;}
+
+.pink_color {
+    color: #cb8ebd !important
+}
 
 .pageContainer {
     max-width: 1710px;
@@ -85,6 +91,13 @@ body:has(.moGnbMenu.active), html:has(.moGnbMenu.active) {
 .subContainer06 {
     max-width: 1440px;
     width: 100%;
+    margin: 0px auto;
+    padding: 0px 20px;
+}
+.subContainer07 {
+    max-width: 1330px;
+    width: 100%;
+    /* outline: 1px solid red; */
     margin: 0px auto;
     padding: 0px 20px;
 }
@@ -3526,6 +3539,7 @@ footer .fee_link {
     margin-bottom: 17px;
     font-weight: 300;
 }
+.subCon_title_sml2 {font-size: 16px; font-weight: 400;}
 
 .subCon_title_sml strong {
     font-weight: 700;
@@ -3538,6 +3552,10 @@ footer .fee_link {
     margin-bottom: 32px;
     display: block;
 }
+.subCon_mainTitle .thinFont{
+    font-weight: 400;
+}
+
 
 .subCon_mainTitle.white {
     color: rgb(255, 255, 255);
@@ -3628,9 +3646,6 @@ footer .fee_link {
     padding-left: 50px;
 }
 
-.medicineInfo {
-}
-
 .subCon_paragraph {
     font-size: 22px;
     margin-bottom: 40px;
@@ -3639,6 +3654,14 @@ footer .fee_link {
 .subCon_paragraph strong {
     font-weight: 700;
 }
+
+.subCon_paragraph2 {
+    font-size: 20px;
+}
+.subCon_paragraph2 strong{
+    font-weight: 700;
+}
+.subCon_paragraph3 {font-weight: 400; font-size: 18px;}
 
 .effectDiv {
     margin-bottom: 30px;
@@ -3784,12 +3807,16 @@ footer .fee_link {
     display: block;
     margin: 30px auto 0px;
     width: calc(100% - 100px);
+    max-width: 1275px;
 }
 
 .packageGuide {
     border: 3px solid rgb(45, 45, 45);
     background: rgb(255, 255, 255);
     padding: 68px 0px 90px;
+    /* margin: 0 30px; */
+    max-width: 1340px;
+    margin: 0 auto;
 }
 
 .packageGuide > span {
@@ -3843,6 +3870,8 @@ footer .fee_link {
     background: rgb(45, 45, 45);
     color: rgb(255, 255, 255);
     height: 120px;
+    max-width: 1340px;
+    margin: 33px auto 0;
 }
 
 .packageLink span {
@@ -3853,6 +3882,7 @@ footer .fee_link {
     height: 100%;
     font-weight: 300;
     flex-wrap: wrap;
+    /* max-width: 1340px; */
 }
 
 .packageLink span strong {
@@ -3869,6 +3899,180 @@ footer .fee_link {
 .root_daum_roughmap .cont .section.lst {
     display: none;
 }
+
+.decoction {text-align: center;}
+.decoction > div > div {display: flex;gap: 92px;margin-top: 70px;justify-content: center;}
+.decoction .imgContents img{
+    width: 100%;
+    display: block;
+    max-width: fit-content;
+}
+.decoction .textContents{
+    text-align: left;
+    padding-top: 60px;
+}
+
+.decoctionSpecial {
+    background: #574b49;
+    text-align: center;
+}
+.decoctionSpecial *{
+    color: #c2b2ae;
+}
+.decoctionSpecial img{
+    max-width: 642px;
+    width: 100%;
+    display: block;
+    margin: 70px auto 0;
+}
+
+.decoctionStep {
+    text-align: center;
+    color: #151515;
+    padding-bottom: 0;
+}
+.decoctionStep * {
+    color: #151515;
+}
+.decoctionStepBox {
+    display: flex;
+    margin-top: 96px;
+    justify-content: space-between;
+    margin-bottom: 150px;
+}
+.decoctionStepBox .lftCon{
+    text-align: left;
+    /* max-width: 400px; */
+    min-width: 400px;
+    flex: 1 1 auto;
+    /* flex: 1 0 400px; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* width: 100%; */
+}
+.step_tag {
+    display: flex;
+    border: 1px solid #8f8f8f;
+    border-radius: 16px;
+    font-size: 16px;
+    width: 156px;
+    height: 32px;
+    /* text-align: center; */
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.step_tag span{
+    color: #8f8f8f;
+}
+.step_tag strong{
+    color: #8f8f8f;
+    font-weight: 700;
+}
+.materialLists{
+    width: 100%;
+}
+.materialLists li{
+    display: inline-flex;
+    width: 36%;
+    flex-direction: column;
+    align-items: center;
+    margin-right: -43px;
+}
+.materialLists li img{
+    display: block;
+    width: 100%;
+}
+.materialLists li span{
+    /* text-align: center; */
+    /* display: block; */
+    margin-top: 28px;
+    /* width: 31%; */
+    font-size: 18px;
+    /* border: 1px solid red; */
+    color: #000;
+    font-weight: 500;
+}
+
+.decoctionStepBox02 {
+    background: #fafafa;
+    padding-top: 150px;
+    margin-bottom: 0;
+    padding-bottom: 150px;
+}
+.decoctionStepBox01 .lftCon,
+.decoctionStepBox02 .lftCon {
+    min-width: 353px;
+}
+.decoctionStepBox02 .inner{
+    display: flex;
+}
+
+.decoctionStepBox02 .careLists{
+    display: flex;
+}
+.decoctionStepBox02 .careLists li{
+    display: inline-flex;
+    width: 38%;
+    flex-direction: column;
+    margin-right: -54px;
+    align-items: center;
+}
+.decoctionStepBox02 .careLists li img{
+    width: 100%;
+    display: block;
+}
+.decoctionStepBox02 .careLists li span{
+    /* text-align: center; */
+    /* display: block; */
+    margin-top: 28px;
+    /* width: 31%; */
+    font-size: 18px;
+    /* border: 1px solid red; */
+    color: #000;
+    font-weight: 500;
+}
+
+.decoctionStepBox03 {
+    margin: 0;
+    background: url("../images/sub10/sub10_content4.jpg") center / cover no-repeat;
+    height: 625px;
+    padding-top: 150px;
+}
+
+.decoctionRecommend{
+    background: #574b49;
+}
+.decoctionRecommend .inner {
+    
+max-width: 1030px;
+    
+margin: 0 auto;
+    
+color: #fff;
+    
+display: flex;
+}
+.decoctionRecommendLists {
+    width: 100%;
+    max-width: 610px;
+    margin-left: auto;
+}
+.decoctionRecommendLists li{
+    width: 100%;
+    border: 1px solid #fff;
+    font-size: 22px;
+    display: flex;
+    border-radius: 26px;
+    height: 52px;
+    word-break: keep-all;
+    align-items: center;
+    padding-left: 54px;
+    margin-bottom: 7px;
+    position: relative;
+}
+.decoctionRecommendLists li:before{content:"";position: absolute;width:20px;height:19px;background: url("../images/sub10/ico_checker_lightpink.png");left: 22px;}
+
 
 @media (max-width: 1700px) {
     .before_and_after .mentBox > div {
@@ -4114,7 +4318,40 @@ footer .fee_link {
     }
 }
 
+/* m1 */
 @media (max-width: 1024px) {
+    .decoctionRecommendLists li {font-size: 20px;}
+    .decoctionRecommend {padding: 120px 0 !important;}
+    .decoctionRecommend .inner {flex-direction: column;padding: 0 20px;}
+    .decoctionStepBox03 {background: url("../images/sub10/mo_sub10_content4.jpg") center / cover no-repeat;height: auto;margin-bottom: 0 !important;padding: 120px 0 300px;}
+    .decoctionRecommendLists {max-width: 100%;}
+    .decoctionStepBox02 {padding: 120px 0;margin-bottom: 0 !important;}
+    .decoctionStepBox02 .inner {gap: 34px;}
+     .decoctionStepBox01 .lftCon, .decoctionStepBox02 .lftCon {min-width: 200px;width: auto;max-width: fit-content;}
+     .decoctionStepBox02 .rhtCon{width: 400px;} 
+    .decoctionStepBox02 .careLists li {width: 100%;}
+    .decoctionStepBox02 .careLists {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .materialLists li {
+    margin-right: 0;
+    margin: -40px;
+    gap: 20px;
+    width: auto;
+}
+.materialLists li span {margin: 0px;}
+    .materialLists li:first-child {
+    width: 100%;
+    flex-direction: column-reverse;
+    margin: -40px;
+}
+    .materialLists li img{
+    width: 350px;
+}
+     .decoctionStepBox {flex-direction: column;gap: 20px;margin-bottom: 120px;/* padding: 120px 0; */}
+    .decoction > div > div {flex-direction: column-reverse;align-items: center;margin: 0;gap: 70px;}
+    .decoction .textContents{text-align: center;padding: 0;}
 .before_and_after:before {width: 100%;height: 50%;}
     .subitro01 .inner > .inner_right img {
         max-width: 165px;
@@ -4210,8 +4447,10 @@ footer .fee_link {
     }
 
     .gramSubCon {
-        padding: 120px 0px;
+        padding: 120px 0px 0;
     }
+    .medicinePackage {padding: 120px 0;}
+    .decoctionSpecial {padding: 120px 0;}
 
     .medicineBasic {
         background: url("../images/sub/mo_sub09_content03.jpg") right bottom / cover no-repeat;
@@ -5487,7 +5726,22 @@ footer .fee_link {
     }
 }
 
+/* m2 */
 @media (max-width: 600px) {
+    .medicinePackage {padding: 80px 0 !important;}
+    .decoctionStepBox02 {padding: 60px 0;}
+    .decoctionStepBox {margin-top: 50px;/* padding: 80px 0; */}
+    .decoctionRecommend {padding: 80px 0 !important;}
+    .decoctionRecommend .inner {padding: 0;}
+    .decoctionRecommendLists li {font-size: 16px;height: 40px;}
+    .step_tag {font-size: 14px; width: 130px; height: 26px;}
+    .decoctionStepBox02 .careLists li span {font-size: 15px;}
+    .decoctionStepBox02 .inner {gap: 17px;}
+    .decoctionStepBox02 .careLists li span {margin-top: 20px;}
+    .decoctionStepBox01 .lftCon, .decoctionStepBox02 .lftCon {min-width: 160px;}
+    .materialLists li img {width: 38vw;min-width: 217px;}
+    .subCon_mainTitle {font-size: 30px;}
+    .subCon_paragraph2 {font-size: 15px;}
     .subitro03 .inner .inner_left p {
         margin-bottom: 25px;
         font-size: 24px;
@@ -5678,6 +5932,8 @@ footer .fee_link {
 }
 
 @media (max-width: 500px) {
+    .decoctionRecommendLists li:before {left: 13px;width: 13px;height: 12px;background-size: cover;}
+    .decoctionRecommendLists li {font-size: 14px;padding-left: 29PX;}
     .subitro01 .inner > .inner_right img {
         width: 115px;
         margin-bottom: 30px;
@@ -5760,7 +6016,19 @@ footer .fee_link {
     }
 }
 
+/* m3 */
 @media (max-width: 400px) {
+    .decoctionRecommendLists li {font-size: 13px;padding-right: 10px;}
+    .decoctionSpecial {padding-bottom: 60px !important; }
+    .decoctionStepBox03 {padding: 0 0 200px;}
+    .decoctionStepBox01 .lftCon, .decoctionStepBox02 .lftCon {min-width: auto;}
+    .decoctionStepBox02 .careLists li span {font-size: 13px;}
+    .decoctionStepBox02 .careLists{gap: 15px;}
+    .materialLists li {margin: -25px;}
+    .materialLists li span {font-size: 14px;}
+    .subCon_paragraph3{font-size: 14px;}
+    .materialLists li img {min-width: 180px;}
+    .subCon_paragraph2 {font-size: 13px;}
     .mo_hide {display: none;}
     .sub_graduation01 {
         min-height: 607px;
@@ -5912,7 +6180,7 @@ footer .fee_link {
     }
 
     .gramSubCon {
-        padding: 60px 0px;
+        padding: 60px 0px 0;
     }
 
     .recommendImg {
