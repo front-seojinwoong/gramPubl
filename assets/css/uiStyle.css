@@ -3520,6 +3520,9 @@ footer .fee_link {
 .gramSubCon {
     padding: 150px 0px;
 }
+.gramSubCon.brownTheme {
+    background: #574b49
+} 
 
 .rightSideInner {
     max-width: 640px;
@@ -3527,9 +3530,6 @@ footer .fee_link {
     flex-direction: column;
     margin-left: auto;
     margin-right: 70px;
-}
-
-.subCon_title {
 }
 
 .subCon_title_sml {
@@ -3544,6 +3544,11 @@ footer .fee_link {
 .subCon_title_sml strong {
     font-weight: 700;
 }
+
+.gramSubCon.brownTheme .subCon_title_sml,
+.gramSubCon.brownTheme .subCon_subTitle{
+    color: #c2b2ae;
+} 
 
 .subCon_mainTitle {
     color: rgb(21, 21, 21);
@@ -3569,6 +3574,8 @@ footer .fee_link {
     color: rgb(21, 21, 21);
     font-size: 22px;
     font-weight: 500;
+}
+.subCon_subTitle02 {
 }
 
 .subCon_subTitle strong {
@@ -4072,6 +4079,99 @@ display: flex;
     position: relative;
 }
 .decoctionRecommendLists li:before{content:"";position: absolute;width:20px;height:19px;background: url("../images/sub/ico_checker_lightpink.png");left: 22px;}
+
+.medicineTypes01 {
+    position: relative;
+    aspect-ratio: 128 / 77;
+    text-align: center;
+    max-height: 1155px;
+    width: 100%;
+}
+.medicineTypes01 .bgimg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.medicineTypes01 .bgimg img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    aspect-ratio: 128 / 77;
+    object-fit: cover;
+    object-position: center bottom;
+}
+.medicineTypes01 .subCon_title {padding-top: 150px;}
+.medicineTypes01 .subCon_title_sml {color: #151515;}
+.medicineTypes02 {
+    background: #574b49;
+    text-align: center;
+    color: #c2b2ae;
+}
+.medicineTypes02 ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    margin-top: 60px;
+}
+.medicineTypes02 ul li{
+    border-radius: 50%;
+    border: 1px solid #fff;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+.medicineTypes02 ul li div{
+    /* border: 1px solid red; */
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.medicineTypes02 ul li div img{
+    max-width: 50%;
+}
+.medicineTypes02 ul li span{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+}
+.medicineTypes03  {
+    text-align: center;
+}
+ .formulation-type-lists{}
+ .formulation-type-lists > li.formulation-types{}
+ .formulation-type-lists > li.endlist {}
+ .formulation-type-lists > li.endlist div{}
+ .formulation-type-lists > li.endlist div img{}
+ .formulation-type-lists > li.endlist div p{}
+ .formulation-type-lists > li.endlist div p strong{}
+ .formulation-type-lists > li{}
+ .formulation-type-lists > li .thumb{}
+ .formulation-type-lists > li .thumb img{}
+ .formulation-type-lists > li .detail{}
+ .formulation-type-lists > li .detail .detail-title{}
+ .formulation-type-lists > li .detail > span{}
+.medicineTypes03 .detail-status {}
+.medicineTypes03 .detail-status > li{}
+.detail-status-tit {}
+.detail-status-bar {}
+.detail-status-bar > span {}
+.detail-status-bar > span.easy.on {}
+.detail-status-bar > span.normal.on {}
+.detail-status-bar > span.hard.on {}
+.medicineTypes04 {}
+.medicineTypes04 ul{}
+.medicineTypes04 ul li{}
+.medicineTypes04 ul li div{}
+.medicineTypes04 ul li div img{}
+.medicineTypes04 ul li span{}
 
 
 @media (max-width: 1700px) {
