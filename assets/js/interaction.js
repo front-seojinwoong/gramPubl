@@ -250,6 +250,30 @@
       });
     },
 
+    // subpage11 - 그램 한약 종류
+    subpage11: function() {
+      // medicineTypes02 섹션
+      const medicineTypes02 = document.querySelector('.medicineTypes02');
+      if (medicineTypes02) {
+        const pictoItems = medicineTypes02.querySelectorAll('ul li');
+        pictoItems.forEach(function(item, index) {
+          item.classList.add('scroll-fade-in', 'delay-' + ((index % 3) + 1));
+        });
+      }
+
+      // medicineTypes03 - 제형 리스트
+      const formulationItems = document.querySelectorAll('.formulation-type-lists > li');
+      formulationItems.forEach(function(item) {
+        item.classList.add('scroll-fade-in');
+      });
+
+      // medicineTypes04 섹션
+      const medicineTypes04Items = document.querySelectorAll('.medicineTypes04 ul li');
+      medicineTypes04Items.forEach(function(item, index) {
+        item.classList.add('scroll-fade-in', 'delay-' + ((index % 2) + 1));
+      });
+    },
+
     init: function() {
       // 현재 페이지 감지 및 해당 애니메이션 실행
       const bodyClass = document.body.className;
