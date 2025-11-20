@@ -3558,7 +3558,7 @@ footer .fee_link {
     display: block;
 }
 .subCon_mainTitle .thinFont{
-    font-weight: 400;
+    font-weight: 300;
 }
 
 
@@ -3575,8 +3575,11 @@ footer .fee_link {
     font-size: 22px;
     font-weight: 500;
 }
-.subCon_subTitle02 {
+.subCon_subTitle.thinFont {
+    font-weight: 400;
 }
+
+.subCon_subTitle02 {display: block;margin-top: 20px;font-size: 14px;}
 
 .subCon_subTitle strong {
     font-weight: 700;
@@ -4145,33 +4148,134 @@ display: flex;
 .medicineTypes03  {
     text-align: center;
 }
- .formulation-type-lists{}
- .formulation-type-lists > li.formulation-types{}
- .formulation-type-lists > li.endlist {}
+.medicineTypes03 * {
+    color: #332b29;
+}
+ .formulation-type-lists{
+    margin-top: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 30px;
+}
+ .formulation-type-lists > li.formulation-types{
+    background: #fafafa;
+}
+ .formulation-type-lists > li.endlist {
+    background: #fafafa;
+    padding-top: 28px;
+    padding-bottom: 100px;
+}
  .formulation-type-lists > li.endlist div{}
- .formulation-type-lists > li.endlist div img{}
- .formulation-type-lists > li.endlist div p{}
- .formulation-type-lists > li.endlist div p strong{}
- .formulation-type-lists > li{}
- .formulation-type-lists > li .thumb{}
- .formulation-type-lists > li .thumb img{}
- .formulation-type-lists > li .detail{}
- .formulation-type-lists > li .detail .detail-title{}
- .formulation-type-lists > li .detail > span{}
-.medicineTypes03 .detail-status {}
-.medicineTypes03 .detail-status > li{}
-.detail-status-tit {}
-.detail-status-bar {}
-.detail-status-bar > span {}
-.detail-status-bar > span.easy.on {}
-.detail-status-bar > span.normal.on {}
-.detail-status-bar > span.hard.on {}
-.medicineTypes04 {}
-.medicineTypes04 ul{}
-.medicineTypes04 ul li{}
+ .formulation-type-lists > li.endlist div img{
+    display: block;
+    width: 100%;
+    max-width: 314px;
+    margin: 0 auto;
+}
+ .formulation-type-lists > li.endlist div p{
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: -34px;
+}
+ .formulation-type-lists > li.endlist div p strong{
+    color: #c27ab2;
+    font-weight: 900;
+}
+ .formulation-type-lists > li{.item {
+    width: calc((100% - 20px) / 3);
+};
+    width: calc((100% - 60px) / 3);
+}
+ .formulation-type-lists > li .thumb{
+    width: 100%;
+}
+ .formulation-type-lists > li .thumb img{
+    width: 100%;
+    display: block;
+}
+ .formulation-type-lists > li .detail{
+    /* background: #fafafa; */
+    padding: 44px 44px 50px;
+}
+ .formulation-type-lists > li .detail .detail-title{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+ .formulation-type-lists > li .detail > span{
+    margin-bottom: 40px;
+    display: block;
+}
+.medicineTypes03 .detail-status {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.medicineTypes03 .detail-status > li{
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+.detail-status-tit {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    width: 50px;
+    flex-shrink: 0;
+}
+.detail-status-bar {
+    background: #ededed;
+    border-radius: 17px;
+    display: flex;
+    padding: 4px;
+    gap: 5px;
+    flex: 1;
+}
+.detail-status-bar > span {
+    /* width: 87px; */
+    font-size: 14px;
+    background: #d2d2d2;
+    height: 27px;
+    display: inline-block;
+    flex: 1;
+    border-radius: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.detail-status-bar > span.easy.on {
+    background: #ecd3e3;
+}
+.detail-status-bar > span.normal.on {
+    background: #e4a7cf;
+}
+.detail-status-bar > span.hard.on {
+    background: #c87aad;
+}
+.medicineTypes04 {
+    background: #fafafa;
+    text-align: center;
+}
+.medicineTypes04 ul{
+    margin-top: 28px;
+    display: flex;
+    gap: 10px;
+}
+.medicineTypes04 ul li{
+    width: calc(50% - 10px);
+}
 .medicineTypes04 ul li div{}
-.medicineTypes04 ul li div img{}
-.medicineTypes04 ul li span{}
+.medicineTypes04 ul li div img{
+    display: block;
+    width: 100%;
+}
+.medicineTypes04 ul li span{
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 30px;
+    display: block;
+}
 
 
 @media (max-width: 1700px) {
@@ -4236,6 +4340,13 @@ display: flex;
 }
 
 @media (max-width: 1400px) {
+    .detail-status-bar > span {/* width: 65px; */}
+    .medicineTypes03 .detail-status > li {gap:10px}
+    .medicineTypes01 {aspect-ratio: 400 / 387;}
+    .medicineTypes01 .bgimg img {aspect-ratio:  400 / 387;}
+    .medicineTypes02 ul li div img {max-width: 40%;}
+    .medicineTypes02 ul {gap: 20px;}
+    .medicineTypes02 ul li {width: 300px; height: 300px; }
     .sub_spirit .spirit_content {gap:40px;}
     .sub_spirit .keyword_box .keyword_subtxt {
         font-size: 16px;
@@ -4420,6 +4531,23 @@ display: flex;
 
 /* m1 */
 @media (max-width: 1024px) {
+    .medicineTypes04 ul li span {font-size: 18px;margin-top: 15px;}
+   .medicineTypes04 ul {flex-wrap: wrap; gap: 30px;}
+   .medicineTypes04 ul li {width: 100%;}
+    .medicineTypes03 .detail-status > li {justify-content: center;}
+    .detail-status-bar {max-width: 300px;}
+.formulation-type-lists > li.endlist {padding-bottom: 80px;}
+    .formulation-type-lists {padding: 0 9vw;margin-top: 50px;}
+    .formulation-type-lists > li {width: 100%;}
+    .medicineTypes02 .picto {        max-width: 681px;
+        width: 100%;
+        margin: 40px auto 0;
+        }
+    .medicineTypes02 .picto img{
+        display: block;
+        width: 100%;
+        }
+    .medicineTypes01 .subCon_title {padding-top: 14vw;}
     .decoctionRecommendLists li {font-size: 20px;}
     .decoctionRecommend {padding: 120px 0 !important;}
     .decoctionRecommend .inner {flex-direction: column;padding: 0 20px;}
@@ -4549,6 +4677,10 @@ display: flex;
     .gramSubCon {
         padding: 120px 0px 0;
     }
+    .medicineTypes04 {padding-bottom: 120px;} 
+    
+
+        .medicineTypes03 {padding-bottom: 120px;}
     .medicinePackage {padding: 120px 0;}
     .decoctionSpecial {padding: 120px 0;}
 
@@ -4628,6 +4760,8 @@ display: flex;
     .system_lists_capture ul > li:last-child {
         order: 3;
     }
+    .medicineTypes02 {padding-bottom: 120px;}
+
 
     .system_lists_capture ul {
         flex-wrap: wrap;
@@ -5828,6 +5962,14 @@ display: flex;
 
 /* m2 */
 @media (max-width: 600px) {
+    .formulation-type-lists > li.endlist div p {font-size: 20px;}
+    .formulation-type-lists > li.endlist {padding-bottom: 40px;}
+    .formulation-type-lists > li .detail .detail-title {font-size: 20px;}
+    .formulation-type-lists > li .detail > span {font-size: 14px;}
+    .detail-status-tit {font-size: 14px;}
+    .formulation-type-lists > li.endlist div img {max-width: 41vw;min-width: 160px;}
+    .formulation-type-lists > li .detail {/* padding-left: 20px; */padding: 30px 20px;/* padding-right: 20px; */}
+    .formulation-type-lists {padding:0 10px; gap:20px;}
     .medicinePackage {padding: 80px 0 !important;}
     .decoctionStepBox02 {padding: 60px 0;}
     .decoctionStepBox {margin-top: 50px;/* padding: 80px 0; */}
@@ -6118,6 +6260,7 @@ display: flex;
 
 /* m3 */
 @media (max-width: 400px) {
+    .formulation-type-lists {padding: 0;}
     .decoctionRecommendLists li {font-size: 13px;padding-right: 10px;}
     .decoctionSpecial {padding-bottom: 60px !important; }
     .decoctionStepBox03 {padding: 0 0 200px;}
@@ -6282,6 +6425,7 @@ display: flex;
     .gramSubCon {
         padding: 60px 0px 0;
     }
+    .medicineTypes04 {padding: 60px 0;;}
 
     .recommendImg {
         padding-bottom: 50px;
@@ -6341,6 +6485,8 @@ display: flex;
     .special_content02 .special_content_icolists > li > img, .special_content02 .special_content_icolists > li:last-child > img {
         width: 48px;
     }
+    .medicineTypes02 {padding-bottom: 60px;}
+
 
     .sub_gram_special .special_content02 .special_content_icolists > li > span {
         font-size: 13px;
@@ -6589,6 +6735,7 @@ display: flex;
     .promotion_lists .promotion_content {
         flex-direction: column;
     }
+    .medicineTypes03{padding-bottom: 60px;}
 
     .promotion_lists ul.promotion_content li {
         width: 100%;
