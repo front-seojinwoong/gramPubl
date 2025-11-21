@@ -274,6 +274,64 @@
       });
     },
 
+    // subpage12 - 올킬 그램컷 약침
+    subpage12: function() {
+      // acupuncture_content01 섹션
+      const content01 = document.querySelector('.acupuncture_content01');
+      if (content01) {
+        const title = content01.querySelector('.subCon_title');
+        const listItems = content01.querySelectorAll('ul li');
+        const medicineImg = content01.querySelector('.medicineImg');
+        const solution = content01.querySelector('.solution');
+
+        if (title) title.classList.add('scroll-fade-in');
+        listItems.forEach(function(item, index) {
+          item.classList.add('scroll-fade-in', 'delay-' + ((index % 3) + 1));
+        });
+        if (medicineImg) medicineImg.classList.add('scroll-fade-in');
+        if (solution) solution.classList.add('scroll-fade-in', 'delay-2');
+      }
+
+      // acupuncture_content02 섹션
+      const content02 = document.querySelector('.acupuncture_content02');
+      if (content02) {
+        const title = content02.querySelector('.subCon_title');
+        const listItems = content02.querySelectorAll('ul > li');
+
+        if (title) title.classList.add('scroll-fade-in');
+        listItems.forEach(function(item, index) {
+          item.classList.add('scroll-fade-in', 'delay-' + ((index % 4) + 1));
+        });
+      }
+
+      // acupuncture_content03 섹션
+      const content03 = document.querySelector('.acupuncture_content03');
+      if (content03) {
+        const title = content03.querySelector('.subCon_title');
+        const stepBoxItems = content03.querySelectorAll('.stepBox > div');
+        const researchBox = content03.querySelector('.researchBox');
+
+        if (title) title.classList.add('scroll-fade-in');
+        stepBoxItems.forEach(function(item, index) {
+          item.classList.add('scroll-fade-in', 'delay-' + ((index % 4) + 1));
+        });
+        if (researchBox) researchBox.classList.add('scroll-fade-in', 'delay-3');
+      }
+
+      // acupuncture_content04 섹션
+      const content04 = document.querySelector('.acupuncture_content04');
+      if (content04) {
+        const title = content04.querySelector('.subCon_title');
+        const listItems = content04.querySelectorAll('ul li');
+
+        if (title) title.classList.add('scroll-fade-in');
+        listItems.forEach(function(item, index) {
+          item.classList.add('scroll-fade-in', 'delay-' + ((index % 4) + 1));
+        });
+      }
+
+    },
+
     init: function() {
       // 현재 페이지 감지 및 해당 애니메이션 실행
       const bodyClass = document.body.className;

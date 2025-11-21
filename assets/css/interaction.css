@@ -217,6 +217,70 @@
   transform: scale(1.03);
 }
 
+/* subpage12 - 올킬 그램컷 약침 */
+
+.acupuncture_content01 ul li .thumb img,
+.acupuncture_content01 .medicineImg {
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+
+/* acupuncture_content02 호버 효과 */
+.acupuncture_content02 ul li {
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.acupuncture_content02 ul li img {
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.acupuncture_content02 ul li:hover {
+  transform: translateY(-8px);
+}
+
+.acupuncture_content02 ul li:hover img {
+  transform: scale(1.05);
+}
+
+/* acupuncture_content03 호버 효과 */
+.acupuncture_content03 .stepBox > div {
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.acupuncture_content03 .stepBox > div img {
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.acupuncture_content03 .stepBox > div:hover {
+  transform: translateY(-5px);
+}
+
+.acupuncture_content03 .stepBox > div:hover img {
+  transform: scale(1.06);
+}
+
+/* acupuncture_content04 호버 효과 */
+.acupuncture_content04 ul li {
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.acupuncture_content04 ul li img {
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.acupuncture_content04 ul li:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.acupuncture_content04 ul li:hover img {
+  transform: scale(1.1);
+}
+
+
 /* 6. 공통 컨텐츠 호버 효과 */
 .main_gramAbility .fadeinoutImgBox0,
 .main_gramAbility .fadeinoutImgBox1,
